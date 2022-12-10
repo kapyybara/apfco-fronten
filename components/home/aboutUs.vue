@@ -52,7 +52,7 @@ export default {}
       url('/images/aboutus-bg.png');
     background-repeat: no-repeat;
     background-position: top right;
-    background-size: contain;
+    background-size: cover;
   }
 
   &__decor {
