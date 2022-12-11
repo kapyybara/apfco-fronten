@@ -1,20 +1,39 @@
 <template>
   <nav class="nav">
-    <nuxt-link class="nav__item sm-medium active" to="#">Trang chủ </nuxt-link>
-    <nuxt-link class="nav__item sm-medium" to="#">Về chúng tôi </nuxt-link>
-    <nuxt-link class="nav__item sm-medium" to="#">Sản phẩm </nuxt-link>
-    <nuxt-link class="nav__item sm-medium" to="#">Quan hệ cổ đông </nuxt-link>
-    <nuxt-link class="nav__item sm-medium" to="#">Tin tức </nuxt-link>
-    <nuxt-link class="nav__item sm-medium" to="#"
-      >Cơ hội nghề nghiệp
-    </nuxt-link>
-    <nuxt-link class="nav__item sm-medium" to="#">Blog</nuxt-link>
+    <nuxt-link
+      v-for="nav in navs"
+      :key="nav.name"
+      class="nav__item sm-medium"
+      :to="nav.path || '/'"
+      :class="{
+        active: routeName === nav.name,
+      }"
+      >{{ nav.value }}</nuxt-link
+    >
   </nav>
 </template>
 
 <script>
 export default {
   name: 'HeaderNavbar',
+  data() {
+    return {
+      navs: [
+        { name: 'index', value: 'Trang chủ', path: '' },
+        { name: 'AboutUs', value: 'Về chúng tôi', path: '/about-us' },
+        { name: 'product', value: 'Sản phẩm', path: '/product' },
+        { name: '4', value: 'Quan hệ cổ đông' },
+        { name: '5', value: 'Tin tức' },
+        { name: '8', value: 'Cơ hội nghề nghiệp' },
+        { name: '9', value: 'Blog' },
+      ],
+    }
+  },
+  computed: {
+    routeName() {
+      return this.$route.name
+    },
+  },
 }
 </script>
 
@@ -62,6 +81,7 @@ export default {
 
 .active {
   color: rgba(234, 33, 39, 1);
+  position: relative;
   &::after {
     position: absolute;
     content: '';
