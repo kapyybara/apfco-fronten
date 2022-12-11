@@ -162,14 +162,17 @@ export default {
 }
 
 .expand-icon {
-  display: flex;
-  flex-direction: column;
-  & > span {
-    height: 3px;
-    width: 2rem;
-    background: #667085;
-    border-radius: 10px;
-    margin-bottom: 4px;
+  display: none;
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    & > span {
+      height: 3px;
+      width: 2rem;
+      background: #667085;
+      border-radius: 10px;
+      margin-bottom: 4px;
+    }
   }
 }
 .hide {

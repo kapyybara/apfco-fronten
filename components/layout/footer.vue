@@ -109,6 +109,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '~/assets/styles/colors.scss';
+@import '~/assets/styles/mixins/responsive';
 .footer {
   position: relative;
   padding: 3rem 0;
@@ -118,7 +119,6 @@ export default {
   justify-content: space-between;
   align-items: start;
   z-index: -1;
-
   &::after {
     content: '';
     position: absolute;
@@ -196,8 +196,53 @@ export default {
     &-right {
       display: flex;
       font-weight: 600;
+      & > * + * {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  @include mobile {
+    flex-direction: column;
+    padding: 3rem 1rem;
+
+    & > svg {
+      margin-bottom: 1rem;
+    }
+    & > span {
+      display: none;
+    }
+    &__nav {
+      display: flex;
+      flex-direction: column;
+      width: fill;
       & > * {
-        margin-right: 1rem;
+        width: fill;
+        border-bottom: 1px solid #dedede;
+        padding: 0.5rem 0;
+        position: relative;
+        &::after {
+          content: '';
+          position: absolute;
+
+          width: 0.5rem;
+          height: 0.5rem;
+
+          border-bottom: 1px solid #000;
+          border-right: 1px solid #000;
+          transform: translateY(-50%) rotate(-45deg);
+          top: 50%;
+          right: 1rem;
+        }
+      }
+    }
+    &__copyright {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      & > * {
+        margin: 0;
       }
     }
   }

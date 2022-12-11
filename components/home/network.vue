@@ -33,10 +33,6 @@ export default {
   justify-content: center;
   padding: 32px 0;
 
-  @include mobile {
-    padding: 3rem 1rem;
-  }
-
   &::before {
     content: '';
     position: absolute;
@@ -88,6 +84,13 @@ export default {
     &__des {
       width: 48rem;
       text-align: center;
+    }
+  }
+
+  @include mobile {
+    padding: 3rem 1rem;
+    &__content {
+      padding: 0;
     }
   }
 }
