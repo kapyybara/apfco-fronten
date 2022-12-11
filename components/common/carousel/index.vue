@@ -3,7 +3,7 @@
     <div ref="carouselRef" class="csr-inner" :style="innerStyle">
       <slot />
     </div>
-    <div class="control padding">
+    <div class="control padding" :class="{ container }">
       <span class="control__item prev" @click="triggerPrev()">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -33,12 +33,13 @@
         </svg>
       </span>
     </div>
-    <div class="index">
+    <div v-if="indexVisible" class="index">
       <span
         v-for="i in length"
         :key="i"
         class="index__point"
         :class="{ 'index-active': i === index + 1 }"
+        @click="index = i - 1"
       ></span>
     </div>
   </div>
@@ -51,6 +52,8 @@ export default {
     length: { type: Number, required: true },
     step: { type: Number, required: true },
     unit: { type: String, required: true, default: 'px' },
+    container: { type: Boolean, default: false },
+    indexVisible: { type: Boolean, default: true },
   },
   data() {
     return {
@@ -86,7 +89,9 @@ export default {
 .csr {
   position: relative;
   width: inherit;
-  height: inherit;
+  height: fill;
+  min-height: 300px;
+  width: fill;
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -98,7 +103,7 @@ export default {
 
     padding: 0;
 
-    height: 100%;
+    height: fit-content;
     display: flex;
 
     width: fit-content;
@@ -131,6 +136,7 @@ export default {
     backdrop-filter: blur(0.125rem);
 
     border-radius: 5rem;
+    cursor: pointer;
     & > * {
       transform: scale(0.8);
     }
@@ -141,12 +147,13 @@ export default {
   position: absolute;
   bottom: 1rem;
   left: 50%;
-  transform: translateX(50%);
+  transform: translateX(-50%);
   z-index: 10;
   display: flex;
 
   flex-direction: row;
 
+  cursor: pointer;
   & > * + * {
     margin-left: 0.5rem;
   }

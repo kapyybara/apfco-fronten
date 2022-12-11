@@ -1,14 +1,14 @@
 <template>
   <nav class="nav">
-    <nuxt-link class="nav__item md-medium active" to="#">Trang chủ </nuxt-link>
-    <nuxt-link class="nav__item md-medium" to="#">Về chúng tôi </nuxt-link>
-    <nuxt-link class="nav__item md-medium" to="#">Sản phẩm </nuxt-link>
-    <nuxt-link class="nav__item md-medium" to="#">Quan hệ cổ đông </nuxt-link>
-    <nuxt-link class="nav__item md-medium" to="#">Tin tức </nuxt-link>
-    <nuxt-link class="nav__item md-medium" to="#"
+    <nuxt-link class="nav__item sm-medium active" to="#">Trang chủ </nuxt-link>
+    <nuxt-link class="nav__item sm-medium" to="#">Về chúng tôi </nuxt-link>
+    <nuxt-link class="nav__item sm-medium" to="#">Sản phẩm </nuxt-link>
+    <nuxt-link class="nav__item sm-medium" to="#">Quan hệ cổ đông </nuxt-link>
+    <nuxt-link class="nav__item sm-medium" to="#">Tin tức </nuxt-link>
+    <nuxt-link class="nav__item sm-medium" to="#"
       >Cơ hội nghề nghiệp
     </nuxt-link>
-    <nuxt-link class="nav__item md-medium" to="#">Blog</nuxt-link>
+    <nuxt-link class="nav__item sm-medium" to="#">Blog</nuxt-link>
   </nav>
 </template>
 
@@ -19,6 +19,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~/assets/styles/mixins/responsive';
 .nav {
   height: inherit;
   display: flex;
@@ -30,12 +31,32 @@ export default {
 
     height: inherit;
 
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 0 0.6rem;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include tablet {
+      padding: 0 0.5rem;
+    }
+  }
+}
+
+@include mobile {
+  .nav {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: -99;
+    background: #fff;
+    & > a {
+      width: fill;
+      text-align: right;
+    }
   }
 }
 

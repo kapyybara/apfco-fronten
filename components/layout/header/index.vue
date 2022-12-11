@@ -1,7 +1,12 @@
 <template>
-  <div class="header-wrap">
+  <div class="header-wrap" :class="{ hide: positionY > 200 }">
     <layout-header-sub />
     <div class="header padding">
+      <div class="expand-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <div class="logo">
         <span>
           <svg
@@ -57,10 +62,22 @@
 <script>
 export default {
   name: 'LayoutHeader',
+  data() {
+    return {
+      positionY: 0,
+    }
+  },
+  mounted() {
+    this.positionY = document.documentElement.scrollTop
+    document.addEventListener('scroll', () => {
+      this.positionY = document.documentElement.scrollTop
+    })
+  },
 }
 </script>
 
 <style lang="scss" scoped>
+@import '~/assets/styles/mixins/responsive';
 .header {
   &-wrap {
     position: fixed;
@@ -70,6 +87,8 @@ export default {
     right: 0;
     display: flex;
     flex-direction: column;
+    transition: all 0.5s ease-out;
+    box-shadow: 0 3px 15px 0px #00000038;
   }
 
   height: 5rem;
@@ -88,19 +107,75 @@ export default {
     justify-content: start;
     & > span {
       margin-right: 1rem;
+      @include tablet {
+        margin-right: 0;
+      }
+      & > svg {
+        width: 4rem;
+      }
     }
     & > img {
       height: 1.5rem;
+      transition: all 0.2s ease-out;
+      @include tablet {
+        height: 1rem;
+      }
+    }
+    @include tablet {
+      flex-direction: column;
+      margin-right: 1rem;
+    }
+    @include mobile {
+      flex-direction: column;
+      margin: 0rem;
+
+      & > span {
+        margin: 0;
+        & > svg {
+          width: fill;
+        }
+      }
+      & > img {
+        display: none;
+      }
     }
   }
 
   .ulti {
     display: flex;
     flex-direction: row;
+    align-items: center;
 
     & > * {
       margin-right: 1rem;
     }
+
+    @include mobile {
+      & > button {
+        display: none;
+      }
+      & > * {
+        margin-right: 0rem;
+      }
+    }
+  }
+}
+
+.expand-icon {
+  display: flex;
+  flex-direction: column;
+  & > span {
+    height: 3px;
+    width: 2rem;
+    background: #667085;
+    border-radius: 10px;
+    margin-bottom: 4px;
+  }
+}
+.hide {
+  transform: translateY(-30px);
+  @include mobile {
+    transform: none;
   }
 }
 </style>

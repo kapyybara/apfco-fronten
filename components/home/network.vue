@@ -2,7 +2,7 @@
   <div class="container network">
     <img src="images/network-map.png" alt="mạng lưới apfco" />
     <div class="network__content">
-      <h2 class="md-semibold">Mạng lưới APFCO</h2>
+      <h2 class="xxl-semibold">Mạng lưới APFCO</h2>
       <span class="divider-decor"></span>
       <p class="network__des xl-normal">
         APFCO sở hữu hệ thống các nhà máy hiện đại từ Duyên hải Nam Trung Bộ,Tây
@@ -23,6 +23,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '~/assets/styles/colors.scss';
+@import '~/assets/styles/mixins/responsive';
 .network {
   position: relative;
 
@@ -31,6 +32,11 @@ export default {
   align-items: center;
   justify-content: center;
   padding: 32px 0;
+
+  @include mobile {
+    padding: 3rem 1rem;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -46,6 +52,17 @@ export default {
 
   & > img {
     width: 50%;
+
+    @include mobile {
+      position: absolute;
+      opacity: 0.2;
+      filter: drop-shadow(2px 4px 6px black) brightness(0.7);
+      width: 60%;
+
+      height: 100%;
+
+      object-fit: contain;
+    }
   }
 
   &__content {

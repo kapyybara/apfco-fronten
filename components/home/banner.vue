@@ -5,7 +5,7 @@
         <div class="container">
           <div class="banner-item__content lg-semibold">
             <p>APFCO khánh thành công ty con thứ 2 tại Lào</p>
-            <common-button value="liên hệ ngay" />
+            <common-button value="Liên hệ ngay" />
           </div>
           <div class="banner-item__img">
             <img src="images/banner-1.png" alt="" />
@@ -16,7 +16,7 @@
         <div class="container">
           <div class="banner-item__content lg-semibold">
             <p>APFCO khánh thành công ty con thứ 2 tại Lào</p>
-            <common-button value="liên hệ ngay" />
+            <common-button value="Liên hệ ngay" />
           </div>
           <div class="banner-item__img">
             <img src="images/banner-1.png" alt="" />
@@ -45,13 +45,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~/assets/styles/mixins/responsive';
 .banner {
   width: fill;
   height: 34rem;
 }
 
 .container {
-  height: inherit;
+  height: 600px;
   position: relative;
 
   &::before {
@@ -74,6 +75,13 @@ export default {
   }
 }
 
+.container {
+  @include mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .banner-item {
   position: relative;
   height: inherit;
@@ -93,6 +101,20 @@ export default {
     flex-direction: column;
     align-items: start;
     justify-content: start;
+
+    @include mobile {
+      position: relative;
+      margin: 0 auto;
+      /* right: 0; */
+      transform: none;
+      top: 0;
+      right: 0;
+      width: -webkit-fill-available;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+    }
 
     & > p {
       margin-bottom: 34px;

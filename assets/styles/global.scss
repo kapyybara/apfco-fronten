@@ -13,6 +13,9 @@ html {
 
 body {
   padding-top: 6.875rem;
+  @include mobile {
+    padding-top: 5rem;
+  }
 }
 
 .container {
@@ -22,7 +25,7 @@ body {
     max-width: 71.25rem;
   }
   @include tablet {
-    max-width: 45rem;
+    max-width: 800px;
   }
   @include mobile {
     max-width: 33.75rem;
@@ -31,4 +34,30 @@ body {
 
 .padding {
   padding: 0 60px;
+  @include tablet {
+    padding: 0 40px;
+  }
+  @include mobile {
+    padding: 0 20px;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #dedede;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $apfco-green;
 }

@@ -4,10 +4,10 @@
       <img src="images/about-us.png" alt="" />
     </div>
     <div class="aboutus__content">
-      <h2 class="md-semibold">Về chúng tôi</h2>
+      <h2 class="xxl-semibold">Về chúng tôi</h2>
       <span></span>
       <p class="xl-normal">
-        Kể từ tháng 12/2003, thương hiệu APFCO đã và đang được nhiều đơn vị
+        <img src="images/about-us.png" alt="" class="image-mobile" />
         khách hàng trên thị trường trong và ngoài nước đón nhận bởi chất lượng
         sản phẩm (nguồn nguyên liệu tươi, sản phẩm bột đạt tiêu chuẩn khắt khe,
         bảo quản trong môi trường chuyên nghiệp), áp dụng kĩ thuật - công nghệ
@@ -24,6 +24,7 @@ export default {}
 
 <style lang="scss" scoped>
 @import '~/assets/styles/colors.scss';
+@import '~/assets/styles/mixins/responsive';
 .aboutus {
   position: relative;
   height: 680px;
@@ -33,6 +34,11 @@ export default {}
   justify-content: space-between;
   align-items: center;
 
+  height: fit-content;
+  padding: 10rem 0;
+  @include mobile {
+    padding: 0;
+  }
   &::before {
     content: '';
     position: absolute;
@@ -57,10 +63,24 @@ export default {}
 
   &__decor {
     width: 50%;
+    height: fill;
+    & > img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+    @include mobile {
+      display: none;
+    }
   }
   &__content {
     padding-left: 4rem;
     width: 50%;
+
+    @include mobile {
+      width: 100%;
+      padding: 3rem 1rem;
+    }
 
     & > * {
       margin-bottom: 2rem;
@@ -82,6 +102,16 @@ export default {}
     & > p {
       color: #667085;
     }
+  }
+}
+
+.image-mobile {
+  width: 40%;
+  float: right;
+  padding: 1rem;
+  display: none;
+  @include mobile {
+    display: block;
   }
 }
 </style>

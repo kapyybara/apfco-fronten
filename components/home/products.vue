@@ -1,6 +1,6 @@
 <template>
   <div class="product container">
-    <h2 class="md-semibold">Sản Phẩm</h2>
+    <h2 class="xxl-semibold">Sản Phẩm</h2>
     <span class="divider-decor"></span>
     <p class="xl-normal product__des">
       Với dây chuyền công nghệ hiện đại cùng với tay nghề nhân công ổn định,
@@ -8,51 +8,25 @@
       đảm bảo vệ sinh an toàn thực phẩm, không ảnh hưởng đến sức khỏe người tiêu
       dùng.
     </p>
-    <div class="productList">
-      <div class="control container">
-        <span class="control__item prev">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="10"
-            height="18"
-            viewBox="0 0 10 18"
-            fill="none"
-          >
-            <path
-              d="M9.00007 17.25C8.80128 17.2473 8.61069 17.1704 8.46569 17.0343L0.965694 9.53435C0.824858 9.39215 0.74585 9.20011 0.74585 8.99997C0.74585 8.79984 0.824858 8.60779 0.965694 8.4656L8.46569 0.965596C8.61142 0.845999 8.79641 0.78488 8.9847 0.794128C9.17299 0.803375 9.35111 0.882328 9.48441 1.01563C9.61771 1.14893 9.69667 1.32705 9.70591 1.51534C9.71516 1.70363 9.65404 1.88862 9.53444 2.03435L2.55944 8.99997L9.53444 15.9656C9.67528 16.1078 9.75429 16.2998 9.75429 16.5C9.75429 16.7001 9.67528 16.8922 9.53444 17.0343C9.38945 17.1704 9.19885 17.2473 9.00007 17.25Z"
-              fill="white"
-            />
-          </svg>
-        </span>
-        <span class="control__item next">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="10"
-            height="18"
-            viewBox="0 0 10 18"
-            fill="none"
-          >
-            <path
-              d="M0.999825 17.25C0.801039 17.2473 0.610442 17.1704 0.46545 17.0343C0.324614 16.8922 0.245605 16.7001 0.245605 16.5C0.245605 16.2998 0.324614 16.1078 0.46545 15.9656L7.44045 8.99997L0.46545 2.03435C0.345853 1.88862 0.284734 1.70363 0.293981 1.51534C0.303229 1.32705 0.382182 1.14893 0.515483 1.01563C0.648784 0.882328 0.826902 0.803375 1.01519 0.794128C1.20348 0.78488 1.38848 0.845999 1.5342 0.965596L9.0342 8.4656C9.17504 8.60779 9.25404 8.79984 9.25404 8.99997C9.25404 9.20011 9.17504 9.39215 9.0342 9.53435L1.5342 17.0343C1.38921 17.1704 1.19861 17.2473 0.999825 17.25Z"
-              fill="white"
-            />
-          </svg>
-        </span>
+    <common-carousel
+      :length="products.length - 5"
+      :step="256"
+      unit="px"
+      class="product-carousel"
+      container
+      :index-visible="false"
+    >
+      <div class="productList">
+        <div v-for="product in products" :key="product.id" class="productItem">
+          <img
+            class="productItem__img"
+            :src="product.img"
+            :alt="product.name"
+          />
+          <p class="productItem__name md-semibold">{{ product.name }}</p>
+        </div>
       </div>
-      <div
-        v-for="product in products"
-        :key="product.id"
-        :class="{
-          unactive:
-            products.indexOf(product) === 0 ||
-            products.indexOf(product) === products.length - 1,
-        }"
-        class="productItem"
-      >
-        <img class="productItem__img" :src="product.img" :alt="product.name" />
-        <p class="productItem__name">{{ product.name }}</p>
-      </div>
-    </div>
+    </common-carousel>
   </div>
 </template>
 
@@ -93,6 +67,16 @@ export default {
           img: 'images/SP6.png',
           name: 'Tinh bột sắn APFCO',
         },
+        {
+          id: 7,
+          img: 'images/SP6.png',
+          name: 'Tinh bột sắn APFCO',
+        },
+        {
+          id: 8,
+          img: 'images/SP6.png',
+          name: 'Tinh bột sắn APFCO',
+        },
       ],
     },
   },
@@ -101,6 +85,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '~/assets/styles/colors.scss';
+@import '~/assets/styles/mixins/responsive';
 .product {
   display: flex;
   flex-direction: column;
@@ -108,6 +93,14 @@ export default {
   justify-content: start;
 
   padding: 6rem 0;
+
+  @include mobile {
+    padding: 3rem 1rem;
+    & > * {
+      margin-bottom: 1rem;
+    }
+  }
+
   & > * {
     margin-bottom: 2rem;
   }
@@ -126,16 +119,18 @@ export default {
   }
 
   &__des {
-    width: 48rem;
+    width: fill;
+    max-width: 48rem;
     color: #667085;
     text-align: center;
   }
 
   &List {
     position: relative;
-    width: 100vw !important;
+    width: fit-content;
+
     display: flex;
-    justify-content: space-around;
+    justify-content: start;
   }
 
   &Item {
@@ -143,17 +138,13 @@ export default {
     flex-direction: column;
     align-self: center;
     justify-content: start;
+    margin: 2rem;
+
     &__img {
       width: 14rem;
     }
     &__name {
       text-align: center;
-
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 600;
-      font-size: 18px;
-      line-height: 28px;
     }
   }
   .control {
@@ -188,7 +179,9 @@ export default {
     }
   }
 }
-
+.product-carousel {
+  width: 100vw !important;
+}
 .unactive {
   opacity: 0.3;
 }

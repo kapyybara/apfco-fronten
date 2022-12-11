@@ -1,56 +1,115 @@
-.md {
-  font-family: 'Inter';
-  font-style: normal;
-  font-size: 16px;
-  line-height: 24px;
+@import './mixins/responsive';
+
+@mixin fontWeight {
+  &-normal {
+    font-weight: 400;
+    @content;
+  }
   &-medium {
     font-weight: 500;
+    @content;
   }
   &-semibold {
     font-weight: 600;
+    @content;
+  }
+  &-bold {
+    font-weight: 700;
+    @content;
   }
 }
 
-.xs-normal {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 0.75rem;
-  line-height: 1.125rem;
+.xs {
+  @include fontWeight {
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+  }
 }
 
-.lg-semibold {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 3rem;
-  line-height: 3.75rem;
-  letter-spacing: -0.02em;
+.sm {
+  @include fontWeight {
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 0.875rem;
+    line-height: 20px;
+    @include tablet {
+      font-size: 0.75rem;
+      line-height: 1.125rem;
+    }
+    @include mobile {
+      font-size: 0.75rem;
+      line-height: 1.125rem;
+    }
+  }
 }
 
-.md-semibold {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 36px;
-  line-height: 44px;
-  /* identical to box height, or 122% */
-
-  letter-spacing: -0.02em;
+.md {
+  @include fontWeight {
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 24px;
+    @include tablet {
+      font-size: 0.875rem;
+      line-height: 20px;
+    }
+    @include mobile {
+      font-size: 0.875rem;
+      line-height: 20px;
+    }
+  }
 }
 
-.xl-normal {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 30px;
+.xl {
+  @include fontWeight {
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 1.25rem;
+    line-height: 30px;
+    @include tablet {
+      font-size: 1rem;
+      line-height: 24px;
+    }
+    @include mobile {
+      font-size: 1rem;
+      line-height: 24px;
+    }
+  }
 }
 
-.sm-bold {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 20px;
+.xxl {
+  @include fontWeight {
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 2.25rem;
+    line-height: 40px;
+    @include tablet {
+      font-size: 1.25rem;
+      line-height: 30px;
+    }
+    @include mobile {
+      font-size: 1.25rem;
+      line-height: 30px;
+    }
+  }
+}
+
+.lg {
+  @include fontWeight {
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 3rem;
+    line-height: 3.75rem;
+    letter-spacing: -0.02em;
+    @include tablet {
+      font-size: 2.25rem;
+      line-height: 50px;
+    }
+    @include mobile {
+      font-size: 2.25rem;
+      line-height: 50px;
+    }
+  }
 }

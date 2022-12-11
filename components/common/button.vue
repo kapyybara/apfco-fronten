@@ -16,6 +16,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '~/assets/styles/colors.scss';
+@import '~/assets/styles/mixins/responsive';
 .button {
   outline: none;
   padding: 0.625rem 1.125rem;
@@ -24,6 +25,9 @@ export default {
   box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
   border-radius: 8px;
   transition: all 0.2s ease-in;
+  @include tablet {
+    padding: 8px 14px;
+  }
 
   &:hover {
     filter: brightness(1.1);

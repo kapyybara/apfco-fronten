@@ -31,6 +31,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '~/assets/styles/colors.scss';
+@import '~/assets/styles/mixins/responsive';
 .subHeader {
   width: fill;
   height: 1.875rem;
@@ -46,6 +47,10 @@ export default {
     display: flex;
     justify-content: end;
     align-items: center;
+  }
+
+  @include mobile {
+    display: none;
   }
 }
 
