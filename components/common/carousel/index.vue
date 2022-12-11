@@ -1,8 +1,10 @@
 <template>
   <div class="csr">
-    <slot />
+    <div ref="carouselRef" class="csr-inner" :style="innerStyle">
+      <slot />
+    </div>
     <div class="control padding">
-      <span class="control__item prev">
+      <span class="control__item prev" @click="triggerPrev()">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="10"
@@ -16,7 +18,7 @@
           />
         </svg>
       </span>
-      <span class="control__item next">
+      <span class="control__item next" @click="triggerNext()">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="10"
@@ -31,12 +33,52 @@
         </svg>
       </span>
     </div>
+    <div class="index">
+      <span
+        v-for="i in length"
+        :key="i"
+        class="index__point"
+        :class="{ 'index-active': i === index + 1 }"
+      ></span>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'CommonCarousel',
+  props: {
+    length: { type: Number, required: true },
+    step: { type: Number, required: true },
+    unit: { type: String, required: true, default: 'px' },
+  },
+  data() {
+    return {
+      position: 0,
+      index: 0,
+    }
+  },
+  computed: {
+    innerStyle() {
+      return {
+        left: `-${this.step * this.index}${this.unit}`,
+      }
+    },
+  },
+  methods: {
+    triggerNext() {
+      if (this.index < this.length - 1) {
+        // this.position = Number(this.position) - Number(this.step)
+        this.index = this.index + 1
+      }
+    },
+    triggerPrev() {
+      if (this.index > 0) {
+        // this.position = Number(this.position) + Number(this.step)
+        this.index = this.index - 1
+      }
+    },
+  },
 }
 </script>
 
@@ -45,6 +87,24 @@ export default {
   position: relative;
   width: inherit;
   height: inherit;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+
+  &-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    padding: 0;
+
+    height: 100%;
+    display: flex;
+
+    width: fit-content;
+
+    transition: all 0.5s ease-out;
+  }
 }
 .control {
   display: flex;
@@ -74,6 +134,33 @@ export default {
     & > * {
       transform: scale(0.8);
     }
+  }
+}
+
+.index {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(50%);
+  z-index: 10;
+  display: flex;
+
+  flex-direction: row;
+
+  & > * + * {
+    margin-left: 0.5rem;
+  }
+
+  &__point {
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 2rem;
+    background: #ffffff;
+    opacity: 0.5;
+  }
+
+  &-active {
+    opacity: 1;
   }
 }
 </style>

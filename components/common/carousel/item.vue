@@ -1,5 +1,5 @@
-<template>
-  <div class="crs-item">
+<template :v-slot="index">
+  <div class="crs__item">
     <slot />
   </div>
 </template>
@@ -7,12 +7,11 @@
 <script>
 export default {
   name: 'CarouselItem',
+  props: {},
 }
 </script>
 
 <style lang="scss" scoped>
-.crs-item {
-  width: inherit;
-  height: inherit;
+.crs__item {
 }
 </style>

@@ -62,8 +62,7 @@ export default {
   props: {
     products: {
       type: Array,
-      // eslint-disable-next-line vue/require-valid-default-prop
-      default: [
+      default: () => [
         {
           id: 1,
           img: 'images/SP1.png',

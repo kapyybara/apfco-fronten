@@ -98,7 +98,6 @@ export default {
     display: flex;
     flex-direction: row;
 
-    align-items: center;
     & > * {
       margin-right: 1rem;
     }

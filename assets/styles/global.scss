@@ -17,6 +17,7 @@ body {
 
 .container {
   margin: 0 auto;
+
   @include desktop {
     max-width: 71.25rem;
   }
