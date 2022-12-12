@@ -2,7 +2,7 @@
   <div class="header-wrap" :class="{ hide: positionY > 200 }">
     <layout-header-sub />
     <div class="header padding">
-      <div class="expand-icon">
+      <div class="expand-icon" @click="toggleNavBar">
         <span></span>
         <span></span>
         <span></span>
@@ -37,7 +37,7 @@
         </span>
         <img src="images/sub-logo.png" alt="" />
       </div>
-      <layout-header-navbar />
+      <layout-header-navbar :show="showNav" />
       <div class="ulti">
         <span class="ulti__searchIcon">
           <svg
@@ -65,6 +65,7 @@ export default {
   data() {
     return {
       positionY: 0,
+      showNav: false,
     }
   },
   mounted() {
@@ -72,6 +73,11 @@ export default {
     document.addEventListener('scroll', () => {
       this.positionY = document.documentElement.scrollTop
     })
+  },
+  methods: {
+    toggleNavBar() {
+      this.showNav = !this.showNav
+    },
   },
 }
 </script>

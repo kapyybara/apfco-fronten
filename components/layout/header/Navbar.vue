@@ -1,5 +1,5 @@
 <template>
-  <nav class="nav">
+  <nav class="nav" :class="{ 'nav-show': show }">
     <nuxt-link
       v-for="nav in navs"
       :key="nav.name"
@@ -16,6 +16,9 @@
 <script>
 export default {
   name: 'HeaderNavbar',
+  props: {
+    show: { type: Boolean, default: false },
+  },
   data() {
     return {
       navs: [
@@ -64,18 +67,38 @@ export default {
 
 @include mobile {
   .nav {
-    display: none;
     position: absolute;
+    display: flex;
     flex-direction: column;
     width: 100vw;
+    justify-content: start;
     top: 0;
     left: 0;
     z-index: -99;
     background: #fff;
+    height: 100vh;
+    padding-top: 80px;
     & > a {
       width: fill;
       text-align: right;
     }
+    transition: all 0.3s ease-in;
+    transform: translateY(-100%);
+    & > * {
+      height: 48px;
+    }
+  }
+
+  .nav-show {
+    top: 0;
+    left: 0;
+    right: 0;
+
+    bottom: 0;
+    height: 100vh;
+    padding-top: 80px;
+    justify-content: start;
+    transform: none;
   }
 }
 
