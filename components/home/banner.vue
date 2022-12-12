@@ -75,6 +75,16 @@ export default {
   }
 }
 
+.banner-item__content {
+  @include mobile {
+    & > p {
+      padding: 0 4rem;
+    }
+    & > button {
+      display: none;
+    }
+  }
+}
 .container {
   @include mobile {
     display: flex;
