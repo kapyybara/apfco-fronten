@@ -32,7 +32,7 @@
         </p>
 
         <p>
-          48 Phạm Xuân Hòa, P. Trần Hưng Đạo, TP. Quảng Ngãi, Tỉnh Quãng Ngãi
+          48 Phạm Xuân Hòa, P. Trần Hưng Đạo, TP. Quảng Ngãi, Tỉnh Quãng Ngải
         </p>
         <p>Điện thoại: (0255) 3827308, 3822529, 3826952, 3819549, 3737279</p>
         <p>Email: apfco@apfco.com.vn - Website: apfco.com.vn</p>
