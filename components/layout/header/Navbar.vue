@@ -1,5 +1,5 @@
 <template>
-  <nav ref="navRef" class="nav" :class="{ 'nav-show': show }">
+  <nav ref="navRef" class="nav" :class="{ 'nav-show': show }" @click="closeNav">
     <nuxt-link
       v-for="nav in navs"
       :key="nav.name"
@@ -8,7 +8,6 @@
       :class="{
         active: routeName === nav.name,
       }"
-      @click="closeNav()"
       >{{ nav.value }}</nuxt-link
     >
   </nav>
@@ -40,7 +39,7 @@ export default {
   },
   methods: {
     closeNav() {
-      console.log('hello')
+      console.log('oke', this?.$refs?.navRef)
       this?.$refs?.navRef?.classList.remove('nav-show')
     },
   },
