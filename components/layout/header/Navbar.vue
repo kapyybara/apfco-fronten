@@ -8,8 +8,8 @@
       :class="{
         active: routeName === nav.name,
       }"
-      >{{ nav.value }}</nuxt-link
-    >
+      >{{ nav.value }}
+    </nuxt-link>
   </nav>
 </template>
 

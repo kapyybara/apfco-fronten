@@ -17,7 +17,7 @@
           />
         </svg>
 
-        <p>Làm việc</p>
+        <nuxt-link to="work-login">Làm việc</nuxt-link>
       </div>
     </div>
   </div>

@@ -7,7 +7,7 @@
         <span></span>
         <span></span>
       </div>
-      <div class="logo">
+      <nuxt-link to="/" class="logo">
         <span>
           <svg
             width="92"
@@ -36,7 +36,7 @@
           </svg>
         </span>
         <img src="images/sub-logo.png" alt="" />
-      </div>
+      </nuxt-link>
       <layout-header-navbar :show="showNav" />
       <div class="ulti">
         <span class="ulti__searchIcon">
