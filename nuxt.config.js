@@ -53,4 +53,7 @@ export default {
     },
   },
   target: 'static',
+  server: {
+    host: '0' // default: localhost
+  }
 }

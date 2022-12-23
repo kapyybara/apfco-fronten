@@ -9,7 +9,8 @@
       </div>
       <nuxt-link to="/" class="logo">
         <span>
-          <svg
+          <img src="/icons/Logo.png" alt="">
+          <!-- <svg
             width="92"
             height="50"
             viewBox="0 0 92 50"
@@ -33,7 +34,7 @@
                 <rect width="92" height="50" fill="white" />
               </clipPath>
             </defs>
-          </svg>
+          </svg> -->
         </span>
         <img src="images/sub-logo.png" alt="" />
       </nuxt-link>
