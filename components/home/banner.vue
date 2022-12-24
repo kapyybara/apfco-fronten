@@ -2,7 +2,7 @@
   <div class="banner">
     <common-carousel :length="3" :step="100" unit="vw">
       <div class="banner-item">
-        <div class="container">
+        <div class="container decor">
           <div class="banner-item__content lg-semibold">
             <p>APFCO khánh thành công ty con thứ 2 tại Lào</p>
             <common-button value="Liên hệ ngay" />
@@ -14,23 +14,15 @@
       </div>
       <div class="banner-item">
         <div class="container">
-          <div class="banner-item__content lg-semibold">
-            <p>APFCO khánh thành công ty con thứ 2 tại Lào</p>
-            <common-button value="Liên hệ ngay" />
-          </div>
           <div class="banner-item__img">
-            <img src="images/banner-1.png" alt="" />
+            <img src="https://lh3.google.com/u/0/d/1GPxGIUpKiUBxlaqTKELCtiHFYy_1BpiM=w1870-h954-iv1" alt="" />
           </div>
         </div>
       </div>
       <div class="banner-item">
         <div class="container">
-          <div class="banner-item__content lg-semibold">
-            <p>APFCO khánh thành công ty con thứ 2 tại Lào</p>
-            <common-button value="liên hệ ngay" />
-          </div>
           <div class="banner-item__img">
-            <img src="images/banner-1.png" alt="" />
+            <img src="https://lh3.google.com/u/0/d/1kFZQ50t-35qRV2dsSvmD2y2_fRU7-lEj=w1870-h654-iv1" alt="" />
           </div>
         </div>
       </div>
@@ -55,6 +47,9 @@ export default {
   height: 600px;
   position: relative;
 
+}
+
+.decor {
   &::before {
     content: '';
     background: linear-gradient(
@@ -139,6 +134,12 @@ export default {
     height: inherit;
     overflow: hidden;
     z-index: -9;
+    &> img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
 
     transform: translate(-50%, -50%);
     object-fit: cover;
