@@ -128,7 +128,7 @@ export default {
       }
 
       &>img {
-        display: none;
+        height: 1rem;
       }
     }
   }
