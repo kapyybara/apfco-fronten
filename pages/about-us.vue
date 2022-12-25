@@ -61,8 +61,8 @@
         <p>Thương hiệu APFCO đã và đang được nhiều đơn vị khách hàng trên thị trường trong và ngoài nước đón nhận bởi chất lượng sản phẩm (nguồn nguyên liệu tươi, sản phẩm bột đạt tiêu chuẩn khắt khe, bảo quản trong môi trường chuyên nghiệp), áp dụng kĩ thuật - công nghệ tiên tiến (ISO 9001:2015), khẳng định uy tín lâu dài.</p>
         <span></span>
         <div class="aboutus-2__images">
-                <img src="/images/aboutus1.png" alt="">
-                <img src="/images/aboutus2.png" alt="">
+                <img src="https://f8-zpcloud.zdn.vn/6726578914812572432/c12a6571fc44241a7d55.jpg" alt="">
+                <img src="https://lh3.googleusercontent.com/fife/AAbDypB2kFrpRFtd5K2Jp0MVNIs4fpHoacf3iBDmcnjUkukupmBwCrXjklJ4b8pIHW_FnCxhDr1T5vgBS4bL6mIV3Fkph0w9DarzoIsE-buA-CmwHbfanQDUNYMJrJYhKjMuv0Q5R_y62gUkRiXE0-nFlj2S61oqtUzIulsRp3qWKE5Pf1f32LwMMVyA1YpSd0a1pWVRcRfjKe930-4NsbVSFZu7j6efcAxD996At0Yn-d-dBbQTVz786eM_OL40SEjg48CgIicp2Pt0_rB1pJPFi51K8Uy6muJ9WvHMLdt0pk7wWw-Q_TuxCOZ3d3EMhfbBUkXyod6iHiE_thacEWBq1aOyM9hp7SMd0bW7LhQjPqxc-zC6z5d0S0NxG8dz-NHrqOrzSIc0mr9afypK5tVVaRd5O4Vi_jIMDdtqVxC4X75EwqBLW7uR_-2LreROGZFEjV-kA0nAWIQfv_v5EBKw-z_Og3Xa0iv3MD97Jk9z6Vkme1hcd2aQpLQujxM6Xt4jKN8pQBWgIZz8mU4EIaBlJDpABI512UmFFy3rhCL8XCF4saaLe_qqeMPnjnGZEZYwCk0Vd_E6lqA7shtj-v9kRTxzSWGRXO90ZmwC9A9rIEXvLJMwJ3nHTJ-qZGTJUorMkWgiJn41YZkWPnSgRaSKRnZUBpAkCiBDgO4urWH-03_U7_29FEQYkq3SWNhb9aXWeiBOs_EdXAtDnFgPZZqg1FMi5Kw_0vC5fn_miq-P1TaWM_AteIV2qJ9q9hIz9Ox_nEUdUPPJ5EwxZ9lQGU49ZZORzWEaNQ4RVfN_RmwIT3hi72q4XZCtpfCUVFCjQyxkq6c-mxYby_uQwkODTrT1v_qOR-u1eXr3dduWnHdzAGfNiv0Z6-Bv9QXPCkXCTqrl0ur9yV1v5ETVWWhE5i3Gu-b7IoWT9MzfD6NOkKFuyRdPjGJN0wpnrolIKku0iogcYV8Nsv5j6n0Yeo750q0OTHrYUF4Y2WSeqlOFI6ZoeohufSPZMnXky_dOZnY2eXUD3Vn2i-CcTm8JNKBeCMooynp2OxNNYxtQgqT6jegNqfJu-bFj7m_72o7PNLLkQFyvowMZLhPgMkfNJ26owlkLZlS16WFVaVF53vL2dsxKqeA40CJ2CHdwOoAUxwksSQd_WVvk-YNWvZp-J47hpV9_J90KBuFFUkj84X_rrpY6xHzJR74R2FXrlHnYK3d8h5nPTnXFJo07QV_WqRmQLo1qAsknXQiIWmCgW7a6nw9qImYTEFsj0pX1aRE_8fIMSoEgW_dPGoVpnbk9NA6hmH3sI5v7J8Ce8OhT8jWTv48ID43NGr_JMPlHbJE3U63zLc49ll0P_2sGnD8rQhO7D_K4JQjyvITn3d_Qzzm5Z7_3X7M0drweNOEwfJp4h-WTnntSnW3-PU5o_WcD1aOuI4T6p9eX-9oY-7eNEua1Uh7bMrAmOPLr899oOJ75LX-7RI95-u9W1AzebLWjy9hputw=w1868-h892" alt="">
                 <img src="/images/aboutus3.png" alt="">
         </div>
      </div>
@@ -74,136 +74,140 @@
 @import "~/assets/styles/mixins/responsive";
 
 .aboutus {
-    padding-top: 4rem;
+  padding-top: 4rem;
 
-    &__header {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: start;
-        margin-bottom: 2rem;
-        font-family: 'Inter';
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 2rem;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 44px;
+
+    color: #667085;
+
+    &-decor {
+      transform: scale(1.5) translateY(25px);
+    }
+
+    &>* {
+      margin-bottom: 1rem;
+    }
+
+    &-text {
+      &>p {
+        margin-bottom: 1.5rem !important;
+      }
+
+      &>h1 {
         font-style: normal;
-        font-weight: 400;
-        font-size: 36px;
-        line-height: 44px;
+        font-weight: 600;
+        font-size: 96px;
+        line-height: 60px;
+        color: #019147;
+      }
+    }
 
-        color: #667085;
+    @include mobile {
+      padding: 1rem;
 
-        &-decor {
-            transform: scale(1.5) translateY(25px);
-        }
+      &-decor {
+        position: absolute;
+        z-index: -1;
+        right: 0;
+        opacity: 0.1;
+      }
+    }
+  }
+
+  &__content1 {
+    padding: 1rem;
+    background: #F5F5F5;
+    margin-bottom: 2rem;
+  }
+
+  &__content2 {
+    color: #667085;
+    padding: 1rem;
+    margin-bottom: 2rem;
+
+    &>* {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &-2 {
+    position: relative;
+    padding: 4rem 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &>* {
+      margin-bottom: 1.5rem;
+    }
+
+    &>span {
+      width: 6rem;
+      height: 0.25rem;
+      display: block;
+
+      background: $apfco-red;
+      border-radius: 2px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100vw;
+      height: 100%;
+
+      top: 50%;
+      left: 50%;
+      z-index: -1;
+
+      background: url("/images/about-decor.png"), linear-gradient(11.23deg, #86C146 7.11%, #00A44E 100.22%);
+      transform: translate(-50%, -50%);
+    }
+
+    &>p {
+      color: #fff;
+    }
+
+    &__images {
+      display: flex;
+      overflow-x: auto;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 1rem;
+
+      &>* {
+        width: 30%;
+        object-fit: cover;
+        border-radius: 1rem;
+        box-shadow: 0rem 0.6rem 1rem #04040445;
+      }
+
+      @include mobile {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
 
         &>* {
-            margin-bottom: 1rem;
+          width: 100%;
+          scroll-snap-align: center;
+          flex-shrink: 0;
+          transform-origin: center center;
+          margin-right: 1rem;
         }
+      }
 
-        &-text {
-            &>p {
-                margin-bottom: 1.5rem !important;
-            }
-
-            &>h1 {
-                font-style: normal;
-                font-weight: 600;
-                font-size: 96px;
-                line-height: 60px;
-                color: #019147;
-            }
-        }
-
-        @include mobile {
-            padding: 1rem;
-
-            &-decor {
-                position: absolute;
-                z-index: -1;
-                right: 0;
-                opacity: 0.1;
-            }
-        }
     }
-
-    &__content1 {
-        padding: 1rem;
-        background: #F5F5F5;
-        margin-bottom: 2rem;
-    }
-
-    &__content2 {
-        color: #667085;
-        padding: 1rem;
-        margin-bottom: 2rem;
-
-        &>* {
-            margin-bottom: 1rem;
-        }
-    }
-
-    &-2 {
-        position: relative;
-        padding: 4rem 1rem;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        &>* {
-            margin-bottom: 1.5rem;
-        }
-
-        &>span {
-            width: 6rem;
-            height: 0.25rem;
-            display: block;
-
-            background: $apfco-red;
-            border-radius: 2px;
-        }
-
-        &::after {
-            position: absolute;
-            content: "";
-            width: 100vw;
-            height: 100%;
-
-            top: 50%;
-            left: 50%;
-            z-index: -1;
-
-            background: url("/images/about-decor.png"), linear-gradient(11.23deg, #86C146 7.11%, #00A44E 100.22%);
-            transform: translate(-50%, -50%);
-        }
-
-        &>p {
-            color: #fff;
-        }
-
-        &__images {
-            display: flex;
-            overflow-x: auto;
-            flex-direction: row;
-            justify-content: start;
-
-            &>* {
-                width: 30%;
-            }
-
-            @include mobile {
-                overflow-x: auto;
-                scroll-snap-type: x mandatory;
-                scroll-behavior: smooth;
-
-                &>* {
-                    width: 100%;
-                    scroll-snap-align: center;
-                    flex-shrink: 0;
-                    transform-origin: center center;
-                    margin-right: 1rem;
-                }
-            }
-
-        }
-    }
+  }
 }
 </style>

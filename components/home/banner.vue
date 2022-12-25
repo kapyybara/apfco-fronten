@@ -8,7 +8,7 @@
           </div>
         </div>
       </div>
-      <div class="banner-item">
+      <!-- <div class="banner-item">
         <div class="container decor">
           <div class="banner-item__content lg-semibold">
 
@@ -19,7 +19,7 @@
             <img src="images/banner-1.png" alt="" />
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="banner-item">
         <div class="container">
           <div class="banner-item__img">
