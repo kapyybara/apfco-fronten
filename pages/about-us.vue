@@ -1,5 +1,5 @@
 <template>
-    <div class="aboutus container">
+    <div class="aboutus container xl-normal">
        <div class="aboutus__header">
             <span class="aboutus__header-text">
                 <p>Giới thiệu về</p>
@@ -71,12 +71,9 @@
 
 <style lang="scss" scoped>
 @import "~/assets/styles/colors.scss";
+@import "~/assets/styles/mixins/responsive";
 
 .aboutus {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 30px;
     padding-top: 4rem;
 
     &__header {
@@ -85,6 +82,13 @@
         justify-content: space-between;
         align-items: start;
         margin-bottom: 2rem;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 44px;
+
+        color: #667085;
 
         &-decor {
             transform: scale(1.5) translateY(25px);
@@ -95,11 +99,6 @@
         }
 
         &-text {
-            font-style: normal;
-            font-weight: 400;
-            font-size: 36px;
-            line-height: 44px;
-
             &>p {
                 margin-bottom: 1.5rem !important;
             }
@@ -110,6 +109,17 @@
                 font-size: 96px;
                 line-height: 60px;
                 color: #019147;
+            }
+        }
+
+        @include mobile {
+            padding: 1rem;
+
+            &-decor {
+                position: absolute;
+                z-index: -1;
+                right: 0;
+                opacity: 0.1;
             }
         }
     }
@@ -171,12 +181,28 @@
 
         &__images {
             display: flex;
+            overflow-x: auto;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: start;
 
             &>* {
                 width: 30%;
             }
+
+            @include mobile {
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                scroll-behavior: smooth;
+
+                &>* {
+                    width: 100%;
+                    scroll-snap-align: center;
+                    flex-shrink: 0;
+                    transform-origin: center center;
+                    margin-right: 1rem;
+                }
+            }
+
         }
     }
 }
