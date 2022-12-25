@@ -1,0 +1,52 @@
+{
+    "locales": [
+        "en",
+        "vi"
+    ],
+    "defaultLocale": "vi",
+    "vueI18n": {
+        "fallbackLocale": "vi",
+        "messages": {
+            "vi": {
+                "home_banner_sologan": "APFCO khánh thành công ty con thứ 2 tại Lào ",
+                "nav_home": "Trang chủ",
+                "nav_aboutus": "Về chúng tôi",
+                "nav_product": "Sản phẩm",
+                "nav_relations": "Quan hệ cổ đông",
+                "nav_news": "Tin tức",
+                "nav_carrer": "Cơ hội nghề nghiệp",
+                "nav_blog": "Blog",
+                "home__aboutus-title": "Về APFCO",
+                "home__aboutus-content": "Kể từ tháng 12/2003, thương hiệu APFCO đã và đang được nhiều đơn vị khách hàng trên thị trường trong và ngoài nước đón nhận bởi chất lượng sản phẩm (nguồn nguyên liệu tươi, sản phẩm bột đạt tiêu chuẩn khắt khe, bảo quản trong môi trường chuyên nghiệp), áp dụng kĩ thuật - công nghệ tiên tiến (ISO 9001:2015), khẳng định uy tín lâu dài.",
+                "see_more": "Tìm hiểu thêm",
+                "home__product-title": "Sản Phẩm",
+                "home__product-content": "Với dây chuyền công nghệ hiện đại cùng với tay nghề nhân công ổn định, tinh bột sắn của công ty tự tin đáp ứng những yêu cầu về chất lượng cao và đảm bảo vệ sinh an toàn thực phẩm, không ảnh hưởng đến sức khỏe người tiêu dùng.",
+                "home__network-title": "Mạng lưới APFCO",
+                "home__network-content": "APFCO sở hữu hệ thống các nhà máy hiện đại từ Duyên hải Nam Trung Bộ,Tây Nguyên đến Đông Nam Bộ, bao gồm: có 12 đơn vị trực thuộc, 6 công ty con và 1 công ty liên kết. Vị trí nhà máy được phân bổ gần kề các vùng nguyên liệu, giúp tối ưu trong khâu vận chuyển & đảm bảochất lượng của nguyên liệu.",
+                "info__fullname": "Công Ty Cổ Phần Nông Sản Thực Phẩm Quảng Ngãi",
+                "info__address": "48 Phạm Xuân Hòa, P. Trần Hưng Đạo, TP. Quảng Ngãi, Tỉnh Quảng Ngãi",
+                "info__phone": "Điện thoại: (0255) 3827308, 3822529, 3826952, 3819549, 3737279"
+            },
+            "en": {
+                "home_banner_sologan": "APFCO kickstarts their 2nd subsidiary in Laos.",
+                "nav_home": "Home",
+                "nav_product": "Our Products",
+                "nav_aboutus": "APFCO Journey",
+                "nav_relations": "Shareholder Relations",
+                "nav_news": "News",
+                "nav_carrer": "Career Opportunities",
+                "nav_blog": "Blog",
+                "home__aboutus-title": "About APFCO",
+                "home__aboutus-content": "Since December 2003, the brand APFCO has been being preferred and selected by many local and foreign clients because of our certificated product quality (fresh raw materials, strictly qualified starch products, professional storage), applying advanced technique and technology (ISO 9001:2015), which affirms our long-standing reputation.",
+                "see_more": "More information",
+                "home__product-title": "Products",
+                "home__product-content": "With cutting-edge manufacturing technology and skilled workers, the company's tapioca starch confidently meets the requirements of high quality and ensures food hygiene and safety, without inappropriate affecting consumers’ health.",
+                "home__network-title": "APFCO network",
+                "home__network-content": "APFCO owns a network of factories and offices from South Central Coast, Central Highlands to Southeast in Vietnam, which includes: 12 Dependent Units, 6 subsidiaries, and 1 associate company. The factory locations are determined to be close to the raw material areas, optimizing the logistic process and quality assurance of raw materials.",
+                "info__fullname": "Quang Ngai Agricultural Products and Foodstuff JSC",
+                "info__address": "48 Pham Xuan Hoa Str., Tran Hung Dao Ward, Quang Ngai City, Quang Ngai Province",
+                "info__phone": "(+84 - 255) 3827308, 3822529, 3826952, 3819549, 3737279"
+            }
+        }
+    }
+}

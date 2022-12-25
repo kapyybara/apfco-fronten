@@ -4,11 +4,11 @@
       v-for="nav in navs"
       :key="nav.name"
       class="nav__item sm-medium"
-      :to="nav.path || '/'"
+      :to="localePath(nav.path || '/')"
       :class="{
         active: routeName === nav.name,
       }"
-      >{{ nav.value }}
+      >{{ $t(nav.value) }}
     </nuxt-link>
   </nav>
 </template>
@@ -22,13 +22,13 @@ export default {
   data() {
     return {
       navs: [
-        { name: 'index', value: 'Trang chủ', path: '' },
-        { name: 'about-us', value: 'Về chúng tôi', path: '/about-us' },
-        { name: 'product', value: 'Sản phẩm', path: '/product' },
-        { name: '4', value: 'Quan hệ cổ đông' },
-        { name: '5', value: 'Tin tức' },
-        { name: '8', value: 'Cơ hội nghề nghiệp' },
-        { name: '9', value: 'Blog' },
+        { name: 'index', value: "nav_home", path: '' },
+        { name: 'about-us', value: "nav_aboutus", path: '/about-us' },
+        { name: 'product', value: "nav_product", path: '/product' },
+        { name: '4', value: "nav_relations" },
+        { name: '5', value: ("nav_news") },
+        { name: '8', value: ("nav_carrer") },
+        { name: '9', value: ("nav_blog") },
       ],
     }
   },

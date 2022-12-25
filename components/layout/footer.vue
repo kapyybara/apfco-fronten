@@ -28,22 +28,25 @@
       </svg>
       <div class="footer__info xs-normal">
         <p class="footer__name sm-bold">
-          Công Ty Cổ Phần Nông Sản Thực Phẩm Quảng Ngãi
+          {{ $t("info__fullname") }}
         </p>
 
         <p>
-          48 Phạm Xuân Hòa, P. Trần Hưng Đạo, TP. Quảng Ngãi, Tỉnh Quãng Ngải
+          {{ $t("info__address") }}
         </p>
-        <p>Điện thoại: (0255) 3827308, 3822529, 3826952, 3819549, 3737279</p>
+        <p>
+          {{ $t("info__phone") }}
+        </p>
         <p>Email: apfco@apfco.com.vn - Website: apfco.com.vn</p>
       </div>
       <div class="footer__nav">
-        <a href="#">Về chúng tôi</a>
-        <a href="#">Sản phẩm</a>
-        <a href="#">Quan hệ cổ đông</a>
-        <a href="#">Tin tức</a>
-        <a href="#">Cơ hội nghề nghiệp </a>
-        <a href="#">Blog</a>
+        <nuxt-link to="" >{{ $t("nav_home") }}</nuxt-link>
+        <nuxt-link to="" >{{ $t("nav_aboutus") }}</nuxt-link>
+        <nuxt-link to="" >{{ $t("nav_product") }}</nuxt-link>
+        <nuxt-link to="" >{{ $t("nav_relations") }}</nuxt-link>
+        <nuxt-link to="" >{{ $t("nav_news") }}</nuxt-link>
+        <nuxt-link to="" >{{ $t("nav_carrer") }}</nuxt-link>
+        <nuxt-link to="" >{{ $t("nav_blog") }}</nuxt-link>
       </div>
       <span class="footer__leaflogo">
         <svg
@@ -110,6 +113,7 @@ export default {
 <style lang="scss" scoped>
 @import '~/assets/styles/colors.scss';
 @import '~/assets/styles/mixins/responsive';
+
 .footer {
   position: relative;
   padding: 3rem 0;
@@ -119,6 +123,7 @@ export default {
   justify-content: space-between;
   align-items: start;
   z-index: -1;
+
   &::after {
     content: '';
     position: absolute;
@@ -133,6 +138,7 @@ export default {
 
     z-index: -1;
   }
+
   &__name {
     color: #000;
   }
@@ -140,7 +146,7 @@ export default {
   &__info {
     color: rgba(102, 112, 133, 1);
 
-    & > * {
+    &>* {
       margin-bottom: 0.5rem;
     }
   }
@@ -149,8 +155,12 @@ export default {
     display: grid;
     row-gap: 1rem;
     column-gap: 1rem;
-    grid-template-columns: 10rem 5rem;
+    grid-template-columns: 10rem 10rem;
     grid-template-rows: 1fr 1fr 1fr;
+
+    &>a {
+      width: fit-content;
+    }
   }
 
   &__leaflogo {
@@ -175,6 +185,7 @@ export default {
     line-height: 20px;
 
     color: #98a2b3;
+
     &::before {
       content: '';
       position: absolute;
@@ -188,10 +199,12 @@ export default {
       background: #fff;
       border-top: 1px solid #eaecf0;
     }
+
     &-right {
       display: flex;
       font-weight: 600;
-      & > * + * {
+
+      &>*+* {
         margin-left: 1rem;
       }
     }
@@ -201,21 +214,25 @@ export default {
     flex-direction: column;
     padding: 3rem 1rem;
 
-    & > svg {
+    &>svg {
       margin-bottom: 1rem;
     }
-    & > span {
+
+    &>span {
       display: none;
     }
+
     &__nav {
       display: flex;
       flex-direction: column;
       width: fill;
-      & > * {
+
+      &>a {
         width: fill;
         border-bottom: 1px solid #dedede;
         padding: 0.5rem 0;
         position: relative;
+
         &::after {
           content: '';
           position: absolute;
@@ -231,12 +248,14 @@ export default {
         }
       }
     }
+
     &__copyright {
       padding: 1rem;
       display: flex;
       flex-direction: column;
       align-items: center;
-      & > * {
+
+      &>* {
         margin: 0;
       }
     }

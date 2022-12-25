@@ -11,7 +11,8 @@
       <div class="banner-item">
         <div class="container decor">
           <div class="banner-item__content lg-semibold">
-            <p>APFCO khánh thành công ty con thứ 2 tại Lào</p>
+
+            <p>{{ $t('home_banner_sologan') }}</p>
             <common-button value="Liên hệ ngay" />
           </div>
           <div class="banner-item__img">

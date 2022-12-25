@@ -2,14 +2,10 @@
   <div class="container network">
     <img src="images/network-map.png" alt="mạng lưới apfco" />
     <div class="network__content">
-      <h2 class="xxl-semibold">Mạng lưới APFCO</h2>
+      <h2 class="xxl-semibold">{{ $t("home__network-title") }}</h2>
       <span class="divider-decor"></span>
       <p class="network__des xl-normal">
-        APFCO sở hữu hệ thống các nhà máy hiện đại từ Duyên hải Nam Trung Bộ,Tây
-        Nguyên đến Đông Nam Bộ, bao gồm: có 12 đơn vị trực thuộc, 6 công ty con
-        và 1 công ty liên kết. Vị trí nhà máy được phân bổ gần kề các vùng
-        nguyên liệu, giúp tối ưu trong khâu vận chuyển & đảm bảochất lượng của
-        nguyên liệu.
+        {{ $t("home__network-content") }}
       </p>
     </div>
   </div>
@@ -24,6 +20,7 @@ export default {
 <style lang="scss" scoped>
 @import '~/assets/styles/colors.scss';
 @import '~/assets/styles/mixins/responsive';
+
 .network {
   position: relative;
 
@@ -46,7 +43,7 @@ export default {
     background-size: contain;
   }
 
-  & > img {
+  &>img {
     width: 50%;
 
     @include mobile {
@@ -65,12 +62,11 @@ export default {
     padding-left: 2rem;
     color: #fff;
 
-    & > * {
+    &>* {
       margin-bottom: 2rem;
     }
 
-    & > h2 {
-    }
+    &>h2 {}
 
     & .divider-decor {
       width: 2rem;
@@ -89,6 +85,7 @@ export default {
 
   @include mobile {
     padding: 3rem 1rem;
+
     &__content {
       padding: 0;
     }

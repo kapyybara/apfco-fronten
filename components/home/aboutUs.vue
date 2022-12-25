@@ -4,17 +4,14 @@
       <img src="images/about-us.png" alt="" />
     </div>
     <div class="aboutus__content">
-      <h2 class="xxl-semibold">Về chúng tôi</h2>
+      <h2 class="xxl-semibold">{{ $t("home__aboutus-title") }}</h2>
       <span></span>
       <p class="xl-normal">
         <img src="images/about-us.png" alt="" class="image-mobile" />
-        khách hàng trên thị trường trong và ngoài nước đón nhận bởi chất lượng
-        sản phẩm (nguồn nguyên liệu tươi, sản phẩm bột đạt tiêu chuẩn khắt khe,
-        bảo quản trong môi trường chuyên nghiệp), áp dụng kĩ thuật - công nghệ
-        tiên tiến (ISO 9001:2015), khẳng định uy tín lâu dài.
+        {{ $t("home__aboutus-content") }}
       </p>
       <nuxt-link to="about-us">
-       <common-button value="Tìm hiểu thêm" />
+       <common-button :value="$t('see_more')" />
       </nuxt-link>
     </div>
   </div>

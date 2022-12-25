@@ -1,12 +1,10 @@
 <template>
   <div class="product container">
-    <h2 class="xxl-semibold">Sản Phẩm</h2>
+    <h2 class="xxl-semibold">{{ $t("home__product-title") }}</h2>
     <span class="divider-decor"></span>
     <p class="xl-normal product__des">
-      Với dây chuyền công nghệ hiện đại cùng với tay nghề nhân công ổn định,
-      tinh bột sắn của công ty tự tin đáp ứng những yêu cầu về chất lượng cao và
-      đảm bảo vệ sinh an toàn thực phẩm, không ảnh hưởng đến sức khỏe người tiêu
-      dùng.
+      {{ $t("home__product-content") }}
+      
     </p>
        <div class="productList-wrap">
            <div class="productList" ref="productListRef">

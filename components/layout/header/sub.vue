@@ -2,7 +2,16 @@
   <div class="subHeader xs-normal padding">
     <p>Công Ty Cổ Phần Nông Sản Thực Phẩm Quảng Ngãi</p>
     <div class="subHeader-left">
-      <div class="lang">VN</div>
+        <client-only >
+          <select @change="onChange($event)" class="lang" >
+            <option value="vi">
+              VI
+            </option>
+            <option value="en">
+              EN
+            </option>
+          </select>
+        </client-only>
       <div class="work">
         <svg
           width="14"
@@ -16,7 +25,6 @@
             fill="white"
           />
         </svg>
-
         <nuxt-link to="work-login">Làm việc</nuxt-link>
       </div>
     </div>
@@ -26,12 +34,18 @@
 <script>
 export default {
   name: 'LayoutHeaderSub',
+  methods: {
+    onChange(e) {
+      this.$router.push(this.switchLocalePath(e.target.value))
+    }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
 @import '~/assets/styles/colors.scss';
 @import '~/assets/styles/mixins/responsive';
+
 .subHeader {
   width: fill;
   height: 1.875rem;
