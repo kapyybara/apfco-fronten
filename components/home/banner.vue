@@ -1,6 +1,6 @@
 <template>
   <div class="banner">
-    <common-carousel :length="6" :step="100" unit="vw">
+    <common-carousel :length="5" :step="100" unit="vw">
       <div class="banner-item">
         <div class="container">
           <div class="banner-item__img">
