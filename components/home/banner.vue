@@ -1,6 +1,6 @@
 <template>
   <div class="banner">
-    <common-carousel :length="3" :step="100" unit="vw">
+    <common-carousel :length="5" :step="100" unit="vw">
       <div class="banner-item">
         <div class="container decor">
           <div class="banner-item__content lg-semibold">
@@ -23,6 +23,20 @@
         <div class="container">
           <div class="banner-item__img">
             <img src="https://lh3.google.com/u/0/d/1kFZQ50t-35qRV2dsSvmD2y2_fRU7-lEj=w1870-h654-iv1" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="banner-item">
+        <div class="container">
+          <div class="banner-item__img">
+            <img src="https://lh3.google.com/u/0/d/1HysdRXytF6iT4lLumBzuHD02oibW26Rt=w1870-h654-iv1" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="banner-item">
+        <div class="container">
+          <div class="banner-item__img">
+            <img src="https://lh3.google.com/u/0/d/1OfNZeChp23Br6ZcPyMvCjRl1xFd91oax=w1870-h654-iv1" alt="" />
           </div>
         </div>
       </div>

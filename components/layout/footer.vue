@@ -48,8 +48,8 @@
       <span class="footer__leaflogo">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="209"
-          height="207"
+          width="150"
+          height="150"
           viewBox="0 0 209 207"
           fill="none"
         >
@@ -155,13 +155,8 @@ export default {
 
   &__leaflogo {
     position: relative;
-    width: 200px;
-
-    & > svg {
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
+    width: 100px;
+    height: 100px;
   }
 
   &__copyright {

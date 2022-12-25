@@ -8,31 +8,25 @@
       đảm bảo vệ sinh an toàn thực phẩm, không ảnh hưởng đến sức khỏe người tiêu
       dùng.
     </p>
-    <common-carousel
-      :length="products.length - 5"
-      :step="256"
-      unit="px"
-      class="product-carousel"
-      container
-      :index-visible="false"
-    >
-      <div class="productList">
-        <div v-for="product in products" :key="product.id" class="productItem">
+      <div class="productList" ref="productListRef">
+        <div  v-for="product in products" :key="product.id" class="productItem">
           <img
             class="productItem__img"
             :src="product.img"
             :alt="product.name"
           />
-          <p class="productItem__name md-semibold">{{ product.name }}</p>
+          <p class="productItem__name md-semibold">{{ product.name }} </p>
         </div>
-      </div>
-    </common-carousel>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'HomeProduct',
+  mounted() {
+    this.$refs.productListRef.scrollBy(100, 0)
+  },
   props: {
     products: {
       type: Array,
@@ -77,6 +71,11 @@ export default {
           img: 'images/SP6.png',
           name: 'Tinh bột sắn APFCO',
         },
+        {
+          id: 9,
+          img: 'images/SP6.png',
+          name: 'Tinh bột sắn APFCO',
+        },
       ],
     },
   },
@@ -86,6 +85,7 @@ export default {
 <style lang="scss" scoped>
 @import '~/assets/styles/colors.scss';
 @import '~/assets/styles/mixins/responsive';
+
 .product {
   display: flex;
   flex-direction: column;
@@ -96,16 +96,17 @@ export default {
 
   @include mobile {
     padding: 3rem 1rem;
-    & > * {
+
+    &>* {
       margin-bottom: 1rem;
     }
   }
 
-  & > * {
+  &>* {
     margin-bottom: 2rem;
   }
 
-  & > h2 {
+  &>h2 {
     color: $apfco-green;
   }
 
@@ -127,26 +128,34 @@ export default {
 
   &List {
     position: relative;
-    width: fit-content;
+    width: 100vw;
 
     display: flex;
     justify-content: start;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
   }
 
   &Item {
     display: flex;
     flex-direction: column;
-    align-self: center;
-    justify-content: start;
+    align-items: center;
     margin: 2rem;
+
+    scroll-snap-align: center;
+    flex-shrink: 0;
+    transform-origin: center center;
 
     &__img {
       width: 14rem;
     }
+
     &__name {
       text-align: center;
     }
   }
+
   .control {
     display: flex;
     flex-direction: row;
@@ -173,16 +182,27 @@ export default {
       backdrop-filter: blur(0.125rem);
 
       border-radius: 5rem;
-      & > * {
+
+      &>* {
         transform: scale(0.8);
       }
     }
   }
 }
+
 .product-carousel {
   width: 100vw !important;
 }
+
 .unactive {
   opacity: 0.3;
+}
+
+@keyframes scrollToCenter {
+  0% {}
+
+  100% {
+    transform: translateX(50%);
+  }
 }
 </style>
