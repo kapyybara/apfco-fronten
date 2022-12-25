@@ -13,7 +13,9 @@
         bảo quản trong môi trường chuyên nghiệp), áp dụng kĩ thuật - công nghệ
         tiên tiến (ISO 9001:2015), khẳng định uy tín lâu dài.
       </p>
-      <common-button value="Tìm hiểu thêm" />
+      <nuxt-link to="about-us">
+       <common-button value="Tìm hiểu thêm" />
+      </nuxt-link>
     </div>
   </div>
 </template>
@@ -25,6 +27,7 @@ export default {}
 <style lang="scss" scoped>
 @import '~/assets/styles/colors.scss';
 @import '~/assets/styles/mixins/responsive';
+
 .aboutus {
   position: relative;
   height: 680px;
@@ -36,9 +39,11 @@ export default {}
 
   height: fit-content;
   padding: 10rem 0;
+
   @include mobile {
     padding: 0;
   }
+
   &::before {
     content: '';
     position: absolute;
@@ -50,11 +55,9 @@ export default {}
     height: 80%;
     z-index: -9;
 
-    background: linear-gradient(
-        180deg,
+    background: linear-gradient(180deg,
         #ffffff 11.46%,
-        rgba(255, 255, 255, 0) 100%
-      ),
+        rgba(255, 255, 255, 0) 100%),
       url('/images/aboutus-bg.png');
     background-repeat: no-repeat;
     background-position: top right;
@@ -64,15 +67,18 @@ export default {}
   &__decor {
     width: 50%;
     height: fill;
-    & > img {
+
+    &>img {
       height: 100%;
       width: 100%;
       object-fit: contain;
     }
+
     @include mobile {
       display: none;
     }
   }
+
   &__content {
     padding-left: 4rem;
     width: 50%;
@@ -82,15 +88,15 @@ export default {}
       padding: 3rem 1rem;
     }
 
-    & > * {
+    &>* {
       margin-bottom: 2rem;
     }
 
-    & > h2 {
+    &>h2 {
       color: $apfco-green;
     }
 
-    & > span {
+    &>span {
       width: 2rem;
       height: 0.25rem;
       display: block;
@@ -99,7 +105,7 @@ export default {}
       border-radius: 2px;
     }
 
-    & > p {
+    &>p {
       color: #667085;
     }
   }
@@ -110,6 +116,7 @@ export default {}
   float: right;
   padding: 1rem;
   display: none;
+
   @include mobile {
     display: block;
   }

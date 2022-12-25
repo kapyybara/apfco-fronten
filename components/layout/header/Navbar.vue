@@ -23,7 +23,7 @@ export default {
     return {
       navs: [
         { name: 'index', value: 'Trang chủ', path: '' },
-        { name: 'AboutUs', value: 'Về chúng tôi', path: '/about-us' },
+        { name: 'about-us', value: 'Về chúng tôi', path: '/about-us' },
         { name: 'product', value: 'Sản phẩm', path: '/product' },
         { name: '4', value: 'Quan hệ cổ đông' },
         { name: '5', value: 'Tin tức' },
@@ -48,12 +48,14 @@ export default {
 
 <style lang="scss" scoped>
 @import '~/assets/styles/mixins/responsive';
+
 .nav {
   height: inherit;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
   &__item {
     position: relative;
 
@@ -84,13 +86,16 @@ export default {
     background: #fff;
     height: 100vh;
     padding-top: 80px;
-    & > a {
+
+    &>a {
       width: fill;
       text-align: right;
     }
+
     transition: all 0.3s ease-in;
     transform: translateY(-100%);
-    & > * {
+
+    &>* {
       height: 48px;
     }
   }
@@ -111,6 +116,7 @@ export default {
 .active {
   color: rgba(234, 33, 39, 1);
   position: relative;
+
   &::after {
     position: absolute;
     content: '';
