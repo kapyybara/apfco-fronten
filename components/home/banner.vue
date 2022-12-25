@@ -1,6 +1,13 @@
 <template>
   <div class="banner">
-    <common-carousel :length="5" :step="100" unit="vw">
+    <common-carousel :length="6" :step="100" unit="vw">
+      <div class="banner-item">
+        <div class="container">
+          <div class="banner-item__img">
+            <img src="https://b-f5-zpc.zdn.vn/6913059151309422733/7316fbdd53ff8ba1d2ee.jpg" alt="" />
+          </div>
+        </div>
+      </div>
       <div class="banner-item">
         <div class="container decor">
           <div class="banner-item__content lg-semibold">
@@ -52,9 +59,10 @@ export default {
 
 <style lang="scss" scoped>
 @import '~/assets/styles/mixins/responsive';
+
 .banner {
   width: fill;
-  height: 34rem;
+  height: 38rem;
 }
 
 .container {
@@ -66,12 +74,9 @@ export default {
 .decor {
   &::before {
     content: '';
-    background: linear-gradient(
-      88.39deg,
-      #007a00 -17.03%,
-      rgba(88, 79, 0, 0) 58.3%
-    );
-
+    background: linear-gradient(88.39deg,
+        #007a00 -17.03%,
+        rgba(88, 79, 0, 0) 58.3%);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -86,14 +91,16 @@ export default {
 
 .banner-item__content {
   @include mobile {
-    & > p {
+    &>p {
       padding: 0 4rem;
     }
-    & > button {
+
+    &>button {
       display: none;
     }
   }
 }
+
 .container {
   @include mobile {
     display: flex;
@@ -101,6 +108,7 @@ export default {
     align-items: center;
   }
 }
+
 .banner-item {
   position: relative;
   height: inherit;
@@ -135,7 +143,7 @@ export default {
       padding: 1rem;
     }
 
-    & > p {
+    &>p {
       margin-bottom: 34px;
     }
   }
@@ -148,7 +156,8 @@ export default {
     height: inherit;
     overflow: hidden;
     z-index: -9;
-    &> img {
+
+    &>img {
       width: 100%;
       height: 100%;
       object-fit: cover;
