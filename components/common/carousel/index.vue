@@ -111,6 +111,7 @@ export default {
     transition: all 0.5s ease-out;
   }
 }
+
 .control {
   display: flex;
   flex-direction: row;
@@ -137,7 +138,8 @@ export default {
 
     border-radius: 5rem;
     cursor: pointer;
-    & > * {
+
+    &>* {
       transform: scale(0.8);
     }
   }
@@ -154,7 +156,8 @@ export default {
   flex-direction: row;
 
   cursor: pointer;
-  & > * + * {
+
+  &>*+* {
     margin-left: 0.5rem;
   }
 
