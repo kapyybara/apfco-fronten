@@ -8,7 +8,7 @@
       </div>
       <div class="loginform xl-bold">
         <label for="username" class="loginform__input">
-          <span>Tên truy cập / Username:</span>
+          <span>Tên truy cập/ Username:</span>
           <input id="username" type="text" />
         </label>
         <label for="password" class="loginform__input">
@@ -86,12 +86,14 @@ export default {
 }
 </script>
 
- <style lang="scss" scoped>
+<style lang="scss" scoped>
 @import '~/assets/styles/colors.scss';
 @import '~/assets/styles/typography.scss';
 @import '~/assets/styles/mixins/responsive';
+
 .login {
   position: relative;
+
   &::before {
     content: '';
     position: absolute;
@@ -102,12 +104,11 @@ export default {
     width: 100vw;
     height: inherit;
     background: rgb(77, 156, 58);
-    background: linear-gradient(
-      90deg,
-      rgba(57, 160, 69, 1) 0%,
-      rgb(39, 143, 12) 100%
-    );
+    background: linear-gradient(90deg,
+        rgba(57, 160, 69, 1) 0%,
+        rgb(39, 143, 12) 100%);
   }
+
   width: 100vw;
   height: calc(100vh - 6.875rem);
 
@@ -125,12 +126,15 @@ export default {
 
   &form {
     width: 40%;
+
     @include tablet {
       width: 50%;
     }
+
     @include mobile {
       width: 80%;
     }
+
     height: fit-content;
 
     background: #fff;
@@ -142,9 +146,11 @@ export default {
     align-items: start;
     padding: 2rem 3rem;
     border-radius: 2rem;
+
     &__input {
       width: fill;
-      & > input {
+
+      &>input {
         width: fill;
         padding: 1.5rem 2rem;
         background: #e6e7e9;
@@ -152,9 +158,11 @@ export default {
         outline: none;
         border-radius: 1rem;
       }
-      & > * {
+
+      &>* {
         margin-bottom: 0.8rem;
       }
+
       margin-bottom: 1rem;
 
       display: flex;
@@ -162,7 +170,7 @@ export default {
       align-items: center;
     }
 
-    & > button {
+    &>button {
       padding: 0.8rem 2rem;
       outline: none;
       border: none;
@@ -184,7 +192,8 @@ export default {
   height: 100%;
 
   color: #fff;
-  & > h2 {
+
+  &>h2 {
     margin-bottom: 2rem;
   }
 
@@ -192,10 +201,11 @@ export default {
     display: none;
   }
 }
+
 .decor {
   position: absolute;
   z-index: -1;
-  transform: scale(3) translateY(-50%);
+  transform: scale(2) translateY(-50%);
   top: 80%;
   left: -10%;
   width: 50vw;
