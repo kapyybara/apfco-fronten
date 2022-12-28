@@ -6,7 +6,7 @@
       class="nav__item sm-medium"
       :to="localePath(nav.path || '/')"
       :class="{
-  active: routeName === nav.name,
+  active: routeName?.includes(nav.name),
 }"
       >{{ $t(nav.value) }}
     </nuxt-link>
@@ -24,10 +24,10 @@
           fill="white"
         />
       </svg>
-      <nuxt-link to="work-login">Làm việc</nuxt-link>
+      <nuxt-link to="work-login "><p class="sm-medium"> Làm việc</p></nuxt-link>
     </div>
   </div>
-    <div class="nav_work">
+    <div class="nav_work ">
       <client-only >
         <select @change="onChange($event)" class="lang" >
           <option value="vi">
@@ -54,6 +54,7 @@ export default {
         { name: 'index', value: "nav_home", path: '' },
         { name: 'about-us', value: "nav_aboutus", path: '/about-us' },
         { name: 'product', value: "nav_product", path: '/product' },
+        { name: 'work', value: "Làm việc", path: '/work-login' },
         // { name: '4', value: "nav_relations" },
         // { name: '5', value: ("nav_news") },
         // { name: '8', value: ("nav_carrer") },
