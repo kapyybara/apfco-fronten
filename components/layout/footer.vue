@@ -40,13 +40,20 @@
         <p>Email: apfco@apfco.com.vn - Website: apfco.com.vn</p>
       </div>
       <div class="footer__nav">
-        <nuxt-link to="" >{{ $t("nav_home") }}</nuxt-link>
+        <nuxt-link
+        v-for="nav in navs"
+        :key="nav.name"
+        class="nav__item sm-medium"
+        :to="localePath(nav.path || '/')"
+        >{{ $t(nav.value) }}
+      </nuxt-link>
+        <!-- <nuxt-link to="" >{{ $t("nav_home") }}</nuxt-link>
         <nuxt-link to="" >{{ $t("nav_aboutus") }}</nuxt-link>
         <nuxt-link to="" >{{ $t("nav_product") }}</nuxt-link>
         <nuxt-link to="" >{{ $t("nav_relations") }}</nuxt-link>
         <nuxt-link to="" >{{ $t("nav_news") }}</nuxt-link>
         <nuxt-link to="" >{{ $t("nav_carrer") }}</nuxt-link>
-        <nuxt-link to="" >{{ $t("nav_blog") }}</nuxt-link>
+        <nuxt-link to="" >{{ $t("nav_blog") }}</nuxt-link> -->
       </div>
       <span class="footer__leaflogo">
         <svg
@@ -107,6 +114,19 @@
 <script>
 export default {
   name: 'LayoutFooter',
+  data() {
+    return {
+      navs: [
+        { name: 'index', value: "nav_home", path: '' },
+        { name: 'about-us', value: "nav_aboutus", path: '/about-us' },
+        { name: 'product', value: "nav_product", path: '/product' },
+        // { name: '4', value: "nav_relations" },
+        // { name: '5', value: ("nav_news") },
+        // { name: '8', value: ("nav_carrer") },
+        // { name: '9', value: ("nav_blog") },
+      ]
+    }
+  }
 }
 </script>
 

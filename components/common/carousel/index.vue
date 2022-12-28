@@ -59,6 +59,7 @@ export default {
     return {
       position: 0,
       index: 0,
+      direct: true
     }
   },
   computed: {
@@ -81,7 +82,24 @@ export default {
         this.index = this.index - 1
       }
     },
+    autoTransition() {
+      setInterval(() => {
+        if (this.direct)
+          this.triggerNext()
+        else
+          this.triggerPrev()
+
+        if (this.index === this.length - 1)
+          this.direct = false
+        else if (this.index === 0)
+          this.direct = true
+      }, 5000);
+    }
   },
+  created() {
+
+    this.autoTransition()
+  }
 }
 </script>
 

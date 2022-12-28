@@ -3,7 +3,7 @@
     <div class="content-1 container">
       <p class="xxl-semibold content-1__title">TINH BỘT BIẾN TÍNH</p>
       <div class="content-1__inner sm-normal">
-        <img class="content-1__img" src="images/tinh-san.jpeg" alt="" />
+        <img class="content-1__img" src="/images/tinh-san.jpeg" alt="" />
         <div class="content-1__inner-wrap">
           <p class="content-1__inner-1">
             Tinh bột sắn biến tính của chúng tôi đạt yêu cầu về an toàn thực
@@ -35,7 +35,7 @@
     </div>
     <product-item
       v-for="product in products"
-      :key="products.indexOf(product)"
+      :key="product.id"
       :name="product.name"
       :feature="product.feature"
       :chara="product.chara"
@@ -53,8 +53,10 @@ export default {
     return {
       products: [
         {
+          id: "632a24bb-6038-40c0-99ca-f1107c2a3908",
+
           name: 'ACETYLATED DISTARCH ADIPATE - E.1422',
-          img: 'images/thivien.png',
+          img: '/images/thivien.png',
           feature: [
             'Tạo đô sánh, độ dày cho sản phẩm',
             'Ngăn khả năng rỉ nước',
@@ -79,8 +81,9 @@ export default {
           ],
         },
         {
+          id: "4920ec36-2d6b-4877-9d9f-93c8dd794aa9",
           name: 'ACETYLATED STARCH - E.1420',
-          img: 'images/410184043-410184043.jpg',
+          img: '/images/410184043-410184043.jpg',
           feature: [
             'Làm tăng, cải thiện khả năng giữ nước.',
             'Ngăn sự thoái hóa tinh bột, ngăn chặn sự tách nước của sản phẩm, giữ được hình dạng sản phẩm sử dụng tinh bột.',
@@ -107,8 +110,9 @@ export default {
           ],
         },
         {
+          id: "4cfe8fa8-8885-4131-9375-ce1767d35668",
           name: 'ACETYLATED STARCH - E.1421',
-          img: 'images/cup-noodle-with-fork_90839-375.jpeg',
+          img: '/images/cup-noodle-with-fork_90839-375.jpeg',
           feature: [
             'Ngăn chặn sự giảm thấp chất tạo bột, đông đặc và rỉ nước.',
             'Cải tạo sự ổn định trong quá trình đông đặc.',
@@ -142,13 +146,16 @@ export default {
 <style lang="scss" scoped>
 @import '~/assets/styles/colors.scss';
 @import '~/assets/styles/mixins/responsive';
+
 .content-1 {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 3rem;
+
   &__img {
     width: 50%;
+
     @include mobile {
       display: none;
     }
@@ -163,30 +170,37 @@ export default {
     flex-direction: row;
     align-items: center;
 
-    & > * + * {
+    &>*+* {
       margin: 1rem;
     }
+
     &-wrap {
       width: 50%;
+
       @include mobile {
         width: 100%;
       }
-      & > * {
+
+      &>* {
         margin-bottom: 1.5rem;
       }
     }
+
     &-ul {
       padding: 1rem;
       background: #dedede;
-      & > li {
+
+      &>li {
         margin-bottom: 0.5rem;
       }
     }
+
     &-3 {
-      & > * {
+      &>* {
         margin-bottom: 1rem;
       }
-      & > p {
+
+      &>p {
         color: $apfco-green;
       }
     }

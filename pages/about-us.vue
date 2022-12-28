@@ -66,6 +66,86 @@
                 <img src="/images/aboutus3.png" alt="">
         </div>
      </div>
+     <div class="career">
+      <img src="https://f7-zpcloud.zdn.vn/2388990670192365860/8f021bb57360ab3ef271.jpg" alt="" class="carrer__img">
+      <div class="career__content">
+        <h2 class="xxl-semibold">Ngành nghề kinh doanh</h2>
+        <p class="md-normal">
+          Chúng tôi đã và đang hoạt động tích cực trong đa dạng các lĩnh vực:
+           <ul>
+
+            <li>- Sản xuất và kinh doanh tinh bột sắn và các sản phẩm sau tinh bột;</li>
+            <li>- Sản xuất, chế tạo, gia công, lắp đặt: thiết bị cơ khí;</li>
+            <li>- Xây dựng dân dụng và công nghiệp;</li>
+            <li>- May mặc xuất khẩu;</li>
+            <li>- Kinh doanh xuất nhập khẩu trực tiếp;</li>
+            <li>- Kinh doanh tổng hợp: Đường, Bia, rượu, thuốc lá
+            điếu, sữa, sắn lát khô, hàng thủ công mỹ nghệ,
+            hàng lâm sản chế biến, hải sản, nam dược, phân
+            bón,vật liệu xây dựng, thiết bị máy móc phục vụ sản xuất;</li>
+            <li>- Đại lý mua bán hàng hóa;</li>
+            <li>- Kinh doanh vận tải hàng hóa bằng ô tô;</li>
+            <li>- Đầu tư kinh doanh khai thác và quản lý chợ, siêu thị;</li>
+          </ul>
+        </p>
+      </div>
+     </div>
+     <div class="core">
+        <div class="core__content align-left">
+          <h3  class="xxl-semibold">Tầm nhìn</h3>
+          <p>Mang đến giá trị chân thật để góp phần vào sự phát triển của ngành Sắn Việt Nam, thúc đẩy kết quả kinh doanh của đối tác, khách hàng và chính bản thân Công ty.</p>
+        </div>
+        <img src="/images/about-us/1.png" alt="">
+        <div></div>
+        <div></div>
+        <img src="/images/about-us/2.png" alt="">
+        <div class="core__content align-right">
+          <h3 class="xxl-semibold">Sứ mệnh</h3>
+          <p>Trở thành doanh nghiệp uy tín hàng đầu về sản xuất và xuất khẩu tinh bột Sắn và tinh bột sắn biến tính trong nước và trong khu vực.</p>
+        </div>
+        <div class="core__content align-left">
+          <h3 class="xxl-semibold">Giá trị cốt lỗi</h3>
+          <h4 class="xl-semibold">Chân thật</h4>
+          <p>Minh bạch, tinh thần học hỏi và cùng nhau phát triển trong quan hệ giao thương với đối tác, quan hệ với cổ đông và trong nội bộ Công ty.
+           </p>
+        </div>
+        <img src="/images/about-us/3.png" alt="">
+        <div class="core__content align-right">
+          <h4 class="xl-semibold">
+           Uy tín
+          </h4>
+          <p>Trong chất lượng từng sản phẩm đầu ra.</p>
+          
+          <h4 class="xl-semibold">Bền vững</h4>
+          <p>Sản xuất và hoạt động thương mại bền bỉ, không ngừng cải tiến để thích nghi với thời cuộc và ổn định theo thời gian.</p>
+        </div>
+     </div>
+     <div class="core-mobile">
+        <div class="core__content ">
+        <img src="/images/about-us/1.png" alt="">
+          <h3  class="xxl-semibold">Tầm nhìn </h3>
+          <p>Mang đến giá trị chân thật để góp phần vào sự phát triển của ngành Sắn Việt Nam, thúc đẩy kết quả kinh doanh của đối tác, khách hàng và chính bản thân Công ty.</p>
+        </div>
+        <div class="core__content ">
+        <img src="/images/about-us/2.png" alt="">
+          <h3 class="xxl-semibold">Sứ mệnh</h3>
+          <p>Trở thành doanh nghiệp uy tín hàng đầu về sản xuất và xuất khẩu tinh bột Sắn và tinh bột sắn biến tính trong nước và trong khu vực.</p>
+        </div>
+        <div class="core__content ">
+        <img src="/images/about-us/3.png" alt="">
+          <h3 class="xxl-semibold">Giá trị cốt lỗi</h3>
+          <h4 class="xl-semibold">Chân thật</h4>
+          <p>Minh bạch, tinh thần học hỏi và cùng nhau phát triển trong quan hệ giao thương với đối tác, quan hệ với cổ đông và trong nội bộ Công ty.
+           </p>
+          <h4 class="xl-semibold">
+           Uy tín
+          </h4>
+          <p>Trong chất lượng từng sản phẩm đầu ra.</p>
+          
+          <h4 class="xl-semibold">Bền vững</h4>
+          <p>Sản xuất và hoạt động thương mại bền bỉ, không ngừng cải tiến để thích nghi với thời cuộc và ổn định theo thời gian.</p>
+        </div>
+     </div>
     </div>
 </template>
 
@@ -209,5 +289,169 @@
 
     }
   }
+}
+
+.career {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 4rem 0;
+
+
+  &>img {
+    width: 40%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+
+  &__content {
+    padding-left: 4rem;
+
+    &>h2 {
+      margin-bottom: 1rem;
+      color: $apfco-green;
+    }
+  }
+
+  @include mobile {
+    flex-direction: row-reverse;
+
+    padding: 2rem 1rem;
+
+    &>img {
+      display: none;
+    }
+
+    &__content {
+      padding-left: 0rem;
+
+      &>h2 {
+        margin-bottom: 1rem;
+        color: $apfco-green;
+      }
+    }
+  }
+}
+
+.core {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-row-gap: 4rem;
+  grid-column-gap: 2rem;
+  align-items: center;
+
+  padding: 8rem 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    height: 100%;
+    width: 100vw;
+    background: url("/images/aboutus102.png");
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+    object-fit: cover;
+    background-position: center;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 70%;
+    width: 6px;
+    background-color: $apfco-green;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__content {
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+
+    &>h3 {
+      color: $apfco-green;
+    }
+
+    &>h4 {
+      color: $apfco-green;
+    }
+
+    &>img {
+      position: absolute;
+      left: -2rem;
+      transform: translateX(-50%);
+      top: 0;
+      width: 3rem;
+    }
+  }
+
+  @include mobile {
+    display: none;
+
+    &__content {
+      margin: 1rem 0;
+    }
+  }
+
+  &-mobile {
+    display: none;
+    padding: 1rem;
+    position: relative;
+    padding-left: 4rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+
+      height: 100%;
+      width: 100vw;
+      background: url("/images/aboutus102.png");
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -2;
+      object-fit: cover;
+      background-position: center;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 6px;
+      background-color: $apfco-green;
+      z-index: -1;
+      top: 0;
+      left: 2rem;
+      transform: translate(-50%, 0);
+    }
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+
+.align-left {
+  text-align: right;
+}
+
+.align-right {
+  text-align: left;
 }
 </style>

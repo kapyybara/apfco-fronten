@@ -4,7 +4,6 @@
     <span class="divider-decor"></span>
     <p class="xl-normal product__des">
       {{ $t("home__product-content") }}
-      
     </p>
        <div class="productList-wrap">
            <div class="productList" ref="productListRef">
@@ -14,7 +13,7 @@
                  :src="product.img"
                  :alt="product.name"
                />
-               <p class="productItem__name md-semibold">{{ product.name }} </p>
+               <!-- <p class="productItem__name md-semibold">{{ product.name }} </p> -->
              </div>
          </div>
         <div class="control padding " >
@@ -78,47 +77,47 @@ export default {
       default: () => [
         {
           id: 1,
-          img: 'images/SP1.png',
+          img: '/images/SP1.png',
           name: 'Tinh bột sắn APFCO',
         },
         {
           id: 2,
-          img: 'images/SP2.png',
+          img: '/images/SP2.png',
           name: 'Tinh bột sắn APFCO',
         },
         {
           id: 3,
-          img: 'images/SP3.png',
+          img: '/images/SP3.png',
           name: 'Tinh bột sắn APFCO',
         },
         {
           id: 4,
-          img: 'images/SP4.png',
+          img: '/images/SP4.png',
           name: 'Tinh bột sắn APFCO',
         },
         {
           id: 5,
-          img: 'images/SP5.png',
+          img: '/images/SP5.png',
           name: 'Tinh bột sắn APFCO',
         },
         {
           id: 6,
-          img: 'images/SP6.png',
+          img: '/images/SP6.png',
           name: 'Tinh bột sắn APFCO',
         },
         {
           id: 7,
-          img: 'images/SP6.png',
+          img: '/images/SP6.png',
           name: 'Tinh bột sắn APFCO',
         },
         {
           id: 8,
-          img: 'images/SP6.png',
+          img: '/images/SP6.png',
           name: 'Tinh bột sắn APFCO',
         },
         {
           id: 9,
-          img: 'images/SP6.png',
+          img: '/images/SP6.png',
           name: 'Tinh bột sắn APFCO',
         },
       ],

@@ -6,8 +6,8 @@
       class="nav__item sm-medium"
       :to="localePath(nav.path || '/')"
       :class="{
-        active: routeName === nav.name,
-      }"
+  active: routeName === nav.name,
+}"
       >{{ $t(nav.value) }}
     </nuxt-link>
     <div class="nav_work">
@@ -54,10 +54,10 @@ export default {
         { name: 'index', value: "nav_home", path: '' },
         { name: 'about-us', value: "nav_aboutus", path: '/about-us' },
         { name: 'product', value: "nav_product", path: '/product' },
-        { name: '4', value: "nav_relations" },
-        { name: '5', value: ("nav_news") },
-        { name: '8', value: ("nav_carrer") },
-        { name: '9', value: ("nav_blog") },
+        // { name: '4', value: "nav_relations" },
+        // { name: '5', value: ("nav_news") },
+        // { name: '8', value: ("nav_carrer") },
+        // { name: '9', value: ("nav_blog") },
       ],
     }
   },

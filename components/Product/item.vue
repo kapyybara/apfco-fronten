@@ -53,24 +53,27 @@ export default {
 <style lang="scss" scoped>
 @import '~/assets/styles/colors.scss';
 @import '~/assets/styles/mixins/responsive';
+
 .product {
   display: flex;
   height: fit-content;
   margin-bottom: 2rem;
 
-  & > * {
+  &>* {
     flex: 1;
   }
 
-  & > * {
+  &>* {
     margin: 1rem;
   }
+
   &-wrap {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 2rem auto;
   }
+
   &__title {
     padding: 1rem 3rem;
     background: $apfco-green;
@@ -78,36 +81,41 @@ export default {
     border-radius: 1rem;
     margin-bottom: 2rem;
   }
+
   &__img {
     width: 33%;
     height: 100%;
     object-fit: contain;
     align-self: center;
+
     &-mobile {
       display: none;
       width: 40%;
       height: 100%;
       object-fit: contain;
+
       @include mobile {
         display: block;
         float: right;
       }
     }
   }
+
   &__group1 {
     margin-bottom: 1rem;
+
     &-title {
       margin-bottom: 1rem;
       color: $apfco-green;
     }
+
     &-list {
-      & > li {
+      &>li {
         margin-bottom: 0.5rem;
       }
     }
   }
-  &__detail {
-  }
+
   &__table {
     border: 1px solid;
     width: fill;
@@ -123,21 +131,25 @@ export default {
       padding: 0.3rem 0.5rem;
     }
   }
+
   @include mobile {
     flex-direction: column;
     padding: 1rem;
-    & > * + * {
+
+    &>*+* {
       margin-left: 0;
     }
 
     &__title {
       margin: 0 1rem;
     }
+
     &__img {
       display: none;
     }
   }
 }
+
 .reverse {
   flex-direction: row-reverse;
 }
