@@ -25,7 +25,19 @@
                 "home__network-content": "APFCO sở hữu hệ thống các nhà máy hiện đại từ Duyên hải Nam Trung Bộ,Tây Nguyên đến Đông Nam Bộ, bao gồm: 12 đơn vị trực thuộc, 6 công ty con và 1 công ty liên kết. Vị trí nhà máy được phân bổ gần kề các vùng nguyên liệu, giúp tối ưu trong khâu vận chuyển & đảm bảochất lượng của nguyên liệu.",
                 "info__fullname": "Công Ty Cổ Phần Nông Sản Thực Phẩm Quảng Ngãi",
                 "info__address": "48 Phạm Xuân Hòa, P. Trần Hưng Đạo, TP. Quảng Ngãi, Tỉnh Quảng Ngãi",
-                "info__phone": "Điện thoại: (0255) 3827308, 3822529, 3826952, 3819549, 3737279"
+                "info__phone": "Điện thoại: (0255) 3827308, 3822529, 3826952, 3819549, 3737279",
+                "product__header-1": "TINH BỘT SẮN BIẾN TÍNH",
+                "product__content-11": "Tinh bột sắn biến tính của chúng tôi đạt yêu cầu về an toàn thực phẩm theo các quy chuẩn, quy định như sau:",
+                "product__content-12": "TCVN 10546:2014 về “Tinh bột sắn",
+                "product__content-13": "Quy định 46/2007/QĐ-BYT về \"Giới hạn tối đa ô nhiễm sinh học và hóa học trong thực phẩm”.",
+                "product__content-14": "TCVN 4-18:2011/BYT về “Phụ gia thực phẩm – nhóm chế phẩm tinh bột”.",
+                "product__content-15": "Quy cách đóng gói:",
+                "product__content-16": "Khối lượng tịnh: Loại 25kg, 50kg, 500kg, 850kg và tùy theo nhu cầu của thị trường trọng lượng có thể thay đổi cho phù hợp.",
+                "product__content-17": "Sản phẩm được đóng gói bằng bao PP+PE, bao giấy.",
+                "relations__menu-1": "ĐIỀU LỆ QUY CHẾ",
+                "relations__menu-2": "BÁO CÁO TÀI CHÍNH",
+                "relations__menu-3": "CÔNG BỐ THÔNG TIN",
+                "relations__menu-4": "  ĐIỀU LỆ QUY CHẾ"
             },
             "en": {
                 "home_banner_sologan": "APFCO kickstarts their 2nd subsidiary in Laos.",
@@ -45,7 +57,19 @@
                 "home__network-content": "APFCO owns a network of factories and offices from South Central Coast, Central Highlands to Southeast in Vietnam, which includes: 12 Dependent Units, 6 subsidiaries, and 1 associate company. The factory locations are determined to be close to the raw material areas, optimizing the logistic process and quality assurance of raw materials.",
                 "info__fullname": "Quang Ngai Agricultural Products and Foodstuff JSC",
                 "info__address": "48 Pham Xuan Hoa Str., Tran Hung Dao Ward, Quang Ngai City, Quang Ngai Province",
-                "info__phone": "(+84 - 255) 3827308, 3822529, 3826952, 3819549, 3737279"
+                "info__phone": "(+84 - 255) 3827308, 3822529, 3826952, 3819549, 3737279",
+                "product__header-1": "MODIFIED TAPIOCA STARCH",
+                "product__content-11": "Our modified tapioca starch meets the requirements of food safety according to the standards and regulations.",
+                "product__content-12": "TCVN 10546:2014 on Tapioca starch.",
+                "product__content-13": "Decision No. 46/2007/QdD-BYT on “Regulation of maximum level of biological and chemical pollution in food”",
+                "product__content-15": "Packaging:",
+                "product__content-14": "TCVN 4-18:2011/BYT on “Food additive – Modified starches”.",
+                "product__content-16": "Net weight: Type 25kg, 50kg, 500kg, 850kg and depending on the needs of the market, the weight can be changed accordingly.",
+                "product__content-17": "Products are packaged in PP + PE bags, paper bags.",
+                "relations__menu-1": "ĐIỀU LỆ QUY CHẾ",
+                "relations__menu-2": "BÁO CÁO TÀI CHÍNH",
+                "relations__menu-3": "CÔNG BỐ THÔNG TIN",
+                "relations__menu-4": "  ĐIỀU LỆ QUY CHẾ"
             }
         }
     }

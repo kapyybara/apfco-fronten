@@ -144,6 +144,19 @@ export default {
   align-items: start;
   z-index: -1;
 
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    background-color: #fff;
+  }
+
   &::after {
     content: '';
     position: absolute;

@@ -101,10 +101,10 @@
         <img src="/images/about-us/2.png" alt="">
         <div class="core__content align-right">
           <h3 class="xxl-semibold">Sứ mệnh</h3>
-          <p>Trở thành doanh nghiệp uy tín hàng đầu về sản xuất và xuất khẩu tinh bột Sắn và tinh bột sắn biến tính trong nước và trong khu vực.</p>
+          <p>Trở thành doanh nghiệp uy tín hàng đầu về sản xuất, xuất khẩu tinh bột Sắn và tinh bột sắn biến tính trong nước và trong khu vực.</p>
         </div>
         <div class="core__content align-left">
-          <h3 class="xxl-semibold">Giá trị cốt lỗi</h3>
+          <h3 class="xxl-semibold">Giá trị cốt lõi</h3>
           <h4 class="xl-semibold">Chân thật</h4>
           <p>Minh bạch, tinh thần học hỏi và cùng nhau phát triển trong quan hệ giao thương với đối tác, quan hệ với cổ đông và trong nội bộ Công ty.
            </p>
@@ -129,11 +129,11 @@
         <div class="core__content ">
         <img src="/images/about-us/2.png" alt="">
           <h3 class="xxl-semibold">Sứ mệnh</h3>
-          <p>Trở thành doanh nghiệp uy tín hàng đầu về sản xuất và xuất khẩu tinh bột Sắn và tinh bột sắn biến tính trong nước và trong khu vực.</p>
+          <p>Trở thành doanh nghiệp uy tín hàng đầu về sản xuất, xuất khẩu tinh bột Sắn và tinh bột sắn biến tính trong nước và trong khu vực.</p>
         </div>
         <div class="core__content ">
         <img src="/images/about-us/3.png" alt="">
-          <h3 class="xxl-semibold">Giá trị cốt lỗi</h3>
+          <h3 class="xxl-semibold">Giá trị cốt lõi</h3>
           <h4 class="xl-semibold">Chân thật</h4>
           <p>Minh bạch, tinh thần học hỏi và cùng nhau phát triển trong quan hệ giao thương với đối tác, quan hệ với cổ đông và trong nội bộ Công ty.
            </p>

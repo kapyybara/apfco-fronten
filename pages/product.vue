@@ -1,33 +1,29 @@
 <template>
   <div style="margin-top: 3rem">
     <div class="content-1 container">
-      <p class="xxl-semibold content-1__title">TINH BỘT BIẾN TÍNH</p>
+      <p class="xxl-semibold content-1__title">{{ $t("product__header-1") }}</p>
       <div class="content-1__inner sm-normal">
         <img class="content-1__img" src="/images/tinh-san.jpeg" alt="" />
         <div class="content-1__inner-wrap">
           <p class="content-1__inner-1">
-            Tinh bột sắn biến tính của chúng tôi đạt yêu cầu về an toàn thực
-            phẩm theo các quy chuẩn, quy định như sau:
+            {{ $t("product__content-11") }}
           </p>
           <ul class="content-1__inner-ul">
-            <li>- TCVN 10546:2014 về “Tinh bột sắn".</li>
+            <li>- {{ $t("product__content-12") }}</li>
             <li>
-              - Quy định 46/2007/QĐ-BYT về "Giới hạn tối đa ô nhiễm sinh học và
-              hóa học trong thực phẩm”.
+              - {{ $t("product__content-13") }}
             </li>
             <li>
-              - TCVN 4-18:2011/BYT về “Phụ gia thực phẩm – nhóm chế phẩm tinh
-              bột”.
+              - {{ $t("product__content-14") }}
             </li>
           </ul>
           <div class="content-1__inner-3">
-            <p class="md-semibold">Quy cách đóng gói</p>
+            <p class="md-semibold">{{ $t("product__content-15") }}</p>
             <ul class="">
               <li>
-                - Khối lượng tịnh: Loại 25kg, 50kg, 500kg, 850kg và tùy theo nhu
-                cầu của thị trường trọng lượng có thể thay đổi cho phù hợp.
+                - {{ $t("product__content-16") }}
               </li>
-              <li>- Sản phẩm được đóng gói bằng bao PP+PE, bao giấy.</li>
+              <li>- {{ $t("product__content-17") }}</li>
             </ul>
           </div>
         </div>
