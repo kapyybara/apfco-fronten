@@ -147,9 +147,11 @@ export default {
             margin: 0.2rem;
             transition: all 0.3s ease-out;
             cursor: pointer;
+            box-shadow: -4px 4px;
 
             &:hover {
                 filter: brightness(1.2);
+                box-shadow: -0px 0px;
             }
         }
 

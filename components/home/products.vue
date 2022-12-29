@@ -77,47 +77,77 @@ export default {
       default: () => [
         {
           id: 1,
-          img: '/images/SP1.png',
+          img: '/images/SP1.jpg',
           name: 'Tinh bột sắn APFCO',
         },
         {
           id: 2,
-          img: '/images/SP2.png',
+          img: '/images/SP2.jpg',
           name: 'Tinh bột sắn APFCO',
         },
         {
           id: 3,
-          img: '/images/SP3.png',
+          img: '/images/SP3.jpg',
           name: 'Tinh bột sắn APFCO',
         },
         {
           id: 4,
-          img: '/images/SP4.png',
+          img: '/images/SP4.jpg',
           name: 'Tinh bột sắn APFCO',
         },
         {
           id: 5,
-          img: '/images/SP5.png',
+          img: '/images/SP5.jpg',
           name: 'Tinh bột sắn APFCO',
         },
         {
           id: 6,
-          img: '/images/SP6.png',
+          img: '/images/SP6.jpg',
           name: 'Tinh bột sắn APFCO',
         },
         {
           id: 7,
-          img: '/images/SP6.png',
+          img: '/images/SP7.jpg',
           name: 'Tinh bột sắn APFCO',
         },
         {
           id: 8,
-          img: '/images/SP6.png',
+          img: '/images/SP8.jpg',
           name: 'Tinh bột sắn APFCO',
         },
         {
           id: 9,
-          img: '/images/SP6.png',
+          img: '/images/SP9.jpg',
+          name: 'Tinh bột sắn APFCO',
+        },
+        {
+          id: 10,
+          img: '/images/SP10.jpg',
+          name: 'Tinh bột sắn APFCO',
+        },
+        {
+          id: 11,
+          img: '/images/SP11.jpg',
+          name: 'Tinh bột sắn APFCO',
+        },
+        {
+          id: 12,
+          img: '/images/SP12.jpg',
+          name: 'Tinh bột sắn APFCO',
+        },
+        {
+          id: 13,
+          img: '/images/SP13.jpg',
+          name: 'Tinh bột sắn APFCO',
+        },
+        {
+          id: 14,
+          img: '/images/SP14.jpg',
+          name: 'Tinh bột sắn APFCO',
+        },
+        {
+          id: 15,
+          img: '/images/SP15.jpg',
           name: 'Tinh bột sắn APFCO',
         },
       ],
