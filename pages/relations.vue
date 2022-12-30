@@ -6,6 +6,7 @@
             <span>{{ $t("relations__menu-2") }}</span>
             <span>{{ $t("relations__menu-3") }}</span>
             <span>{{ $t("relations__menu-4") }}</span>
+            <span>{{ $t("relations__menu-5") }}</span>
         </div>
        <div class="relations-main container">
         <h2 class="xxl-bold">{{ $t(curr) }}</h2>
@@ -85,7 +86,7 @@ export default {
                     },
                     {
                         id: 4,
-                        name: "",
+                        name: "Quy chế hoạt động của Ban kiểm soát",
                         values: [
                             {
                                 id: 1,
@@ -157,7 +158,7 @@ export default {
 
         @include mobile {
             flex-direction: column;
-            top: 75px;
+            top: 20px;
 
             &>* {
                 width: fill;
@@ -207,9 +208,10 @@ export default {
 .group {
     display: flex;
     flex-direction: column;
+    width: fill;
 
     &__title {
-        margin: 1rem 0;
+        margin: 1.5rem 0;
     }
 }
 
@@ -217,6 +219,14 @@ export default {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-bottom: 0.5rem;
+    width: fill;
+    padding: 0.5rem;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+        background: #dedede;
+    }
 
     &>img {
         width: 2rem;

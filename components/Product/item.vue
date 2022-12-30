@@ -2,9 +2,9 @@
   <div class="product-wrap sm-normal container">
     <span class="product__title xxl-semibold">{{ name }}</span>
     <div class="product" :class="{ reverse: index % 2 === 1 }">
-      <div class="product__detail">
+      <div v-if="table.length > 0" class="product__detail">
         <p class="product__group1-title md-semibold">1. Tiêu chuẩn kỹ thuật</p>
-        <table class="product__table">
+        <table  class="product__table">
           <tr>
             <th>{{ key }}Chỉ tiêu</th>
             <th>ĐVT</th>

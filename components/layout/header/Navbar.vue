@@ -6,6 +6,7 @@
       class="nav__item sm-medium"
       :to="localePath(nav.path || '/')"
       :class="{
+  hint: true,
   active: routeName?.includes(nav.name),
 }"
       >{{ $t(nav.value) }}
@@ -24,7 +25,7 @@
           fill="white"
         />
       </svg>
-      <nuxt-link to="work-login "><p class="sm-medium"> Làm việc</p></nuxt-link>
+      <!-- <nuxt-link to="work-login "><p class="sm-medium"> Làm việc</p></nuxt-link> -->
     </div>
   </div>
     <div class="nav_work ">
@@ -119,6 +120,7 @@ export default {
     background: #fff;
     height: 100vh;
     padding-top: 80px;
+    transition: all 0.3s ease-out;
 
     &>a {
       width: fill;
@@ -157,6 +159,7 @@ export default {
     left: 0;
     right: 0;
     border-bottom: 4px solid rgba(234, 33, 39, 1);
+    opacity: 1 !important;
   }
 }
 
@@ -170,6 +173,21 @@ export default {
     justify-content: center;
     height: fit-content;
     padding: 1rem;
+  }
+}
+
+.hint {
+  transition: all 0.3s ease-out;
+
+  &::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 4px solid rgba(234, 33, 39, 1);
+    opacity: 0;
+    transition: all 0.3s ease-out;
   }
 }
 </style>
