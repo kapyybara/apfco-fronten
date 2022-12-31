@@ -1,9 +1,9 @@
-import i18nConfig from "./i18n"
+import i18nConfig from './i18n'
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'apfco-website',
+    title: 'Công Ty Cổ Phần Nông Sản Thực Phẩm Quảng Ngãi',
     htmlAttrs: {
       lang: 'en',
     },
@@ -58,6 +58,6 @@ export default {
   },
   target: 'static',
   server: {
-    host: '0' // default: localhost
-  }
+    host: '0', // default: localhost
+  },
 }

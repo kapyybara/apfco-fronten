@@ -3,8 +3,8 @@
     <span class="product__title xxl-semibold">{{ name }}</span>
     <div class="product" :class="{ reverse: index % 2 === 1 }">
       <div v-if="table.length > 0" class="product__detail">
-        <p class="product__group1-title md-semibold">1. Tiêu chuẩn kỹ thuật</p>
-        <table  class="product__table">
+        <p class="product__group1-title md-semibold">Tiêu chuẩn kỹ thuật</p>
+        <table class="product__table">
           <tr>
             <th>{{ key }}Chỉ tiêu</th>
             <th>ĐVT</th>
@@ -18,13 +18,13 @@
         </table>
       </div>
       <div class="product__group1">
-        <p class="product__group1-title md-semibold">2. Đặc tính</p>
+        <p class="product__group1-title md-semibold">Đặc tính</p>
         <ul class="product__group1-list">
           <li v-for="item in feature" :key="feature.indexOf(item)">
             - {{ item }}
           </li>
         </ul>
-        <p class="product__group1-title md-semibold">2. Ứng dụng</p>
+        <p class="product__group1-title md-semibold">Ứng dụng</p>
         <ul class="product__group1-list">
           <img :src="img" alt="" class="product__img-mobile" />
           <li v-for="item in chara" :key="chara.indexOf(item)">- {{ item }}</li>
@@ -49,7 +49,6 @@ export default {
 }
 </script>
 
-
 <style lang="scss" scoped>
 @import '~/assets/styles/colors.scss';
 @import '~/assets/styles/mixins/responsive';
@@ -59,11 +58,11 @@ export default {
   height: fit-content;
   margin-bottom: 2rem;
 
-  &>* {
+  & > * {
     flex: 1;
   }
 
-  &>* {
+  & > * {
     margin: 1rem;
   }
 
@@ -110,7 +109,7 @@ export default {
     }
 
     &-list {
-      &>li {
+      & > li {
         margin-bottom: 0.5rem;
       }
     }
@@ -136,7 +135,7 @@ export default {
     flex-direction: column;
     padding: 1rem;
 
-    &>*+* {
+    & > * + * {
       margin-left: 0;
     }
 
