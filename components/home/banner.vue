@@ -4,7 +4,10 @@
       <div class="banner-item">
         <div class="container">
           <div class="banner-item__img">
-            <img src="https://b-f5-zpc.zdn.vn/6913059151309422733/7316fbdd53ff8ba1d2ee.jpg" alt="" />
+            <img
+              src="https://b-f5-zpc.zdn.vn/6913059151309422733/7316fbdd53ff8ba1d2ee.jpg"
+              alt=""
+            />
           </div>
         </div>
       </div>
@@ -23,28 +26,28 @@
       <div class="banner-item">
         <div class="container">
           <div class="banner-item__img">
-            <img src="https://lh3.google.com/u/0/d/1GPxGIUpKiUBxlaqTKELCtiHFYy_1BpiM=w1870-h954-iv1" alt="" />
+            <img src="/images/banner-3.jpeg" alt="" />
           </div>
         </div>
       </div>
       <div class="banner-item">
         <div class="container">
           <div class="banner-item__img">
-            <img src="https://lh3.google.com/u/0/d/1kFZQ50t-35qRV2dsSvmD2y2_fRU7-lEj=w1870-h654-iv1" alt="" />
+            <img src="/images/banner-2.jpeg" alt="" />
           </div>
         </div>
       </div>
       <div class="banner-item">
         <div class="container">
           <div class="banner-item__img">
-            <img src="https://lh3.google.com/u/0/d/1HysdRXytF6iT4lLumBzuHD02oibW26Rt=w1870-h654-iv1" alt="" />
+            <img src="/images/banner-4.jpeg" alt="" />
           </div>
         </div>
       </div>
       <div class="banner-item">
         <div class="container">
           <div class="banner-item__img">
-            <img src="https://lh3.google.com/u/0/d/1OfNZeChp23Br6ZcPyMvCjRl1xFd91oax=w1870-h654-iv1" alt="" />
+            <img src="images/banner-5.jpg" alt="" />
           </div>
         </div>
       </div>
@@ -55,7 +58,6 @@
 <script>
 export default {
   name: 'HomeBanner',
-
 }
 </script>
 
@@ -70,15 +72,16 @@ export default {
 .container {
   height: 600px;
   position: relative;
-
 }
 
 .decor {
   &::before {
     content: '';
-    background: linear-gradient(88.39deg,
-        #007a00 -17.03%,
-        rgba(88, 79, 0, 0) 58.3%);
+    background: linear-gradient(
+      88.39deg,
+      #007a00 -17.03%,
+      rgba(88, 79, 0, 0) 58.3%
+    );
     position: absolute;
     top: 50%;
     left: 50%;
@@ -93,11 +96,11 @@ export default {
 
 .banner-item__content {
   @include mobile {
-    &>p {
+    & > p {
       padding: 0 4rem;
     }
 
-    &>button {
+    & > button {
       display: none;
     }
   }
@@ -145,7 +148,7 @@ export default {
       padding: 1rem;
     }
 
-    &>p {
+    & > p {
       margin-bottom: 34px;
     }
   }
@@ -159,7 +162,7 @@ export default {
     overflow: hidden;
     z-index: -9;
 
-    &>img {
+    & > img {
       width: 100%;
       height: 100%;
       object-fit: cover;

@@ -3,16 +3,12 @@
     <p>Công Ty Cổ Phần Nông Sản Thực Phẩm Quảng Ngãi</p>
     <p></p>
     <div class="subHeader-left">
-        <client-only >
-          <select @change="onChange($event)" class="lang" >
-            <option value="vi">
-              VI
-            </option>
-            <option value="en">
-              EN
-            </option>
-          </select>
-        </client-only>
+      <client-only>
+        <select @change="onChange($event)" class="lang">
+          <option value="vi">VI</option>
+          <option value="en">EN</option>
+        </select>
+      </client-only>
       <div class="work">
         <svg
           width="14"
@@ -26,7 +22,9 @@
             fill="white"
           />
         </svg>
-        <nuxt-link to="work-login">Làm việc</nuxt-link>
+        <a href="http://apfco.com.vn/htmx/basic/login/login.aspx">{{
+          $t('work')
+        }}</a>
       </div>
       <a class="linktoold" target="_blank" href="http://apfco.com.vn/?v=o"> Website cũ</a>
     </div>
@@ -39,8 +37,8 @@ export default {
   methods: {
     onChange(e) {
       this.$router.push(this.switchLocalePath(e.target.value))
-    }
-  }
+    },
+  },
 }
 </script>
 
