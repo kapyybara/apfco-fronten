@@ -1,6 +1,7 @@
 <template>
   <div class="subHeader xs-normal padding">
     <p>Công Ty Cổ Phần Nông Sản Thực Phẩm Quảng Ngãi</p>
+    <p></p>
     <div class="subHeader-left">
         <client-only >
           <select @change="onChange($event)" class="lang" >
@@ -27,6 +28,7 @@
         </svg>
         <nuxt-link to="work-login">Làm việc</nuxt-link>
       </div>
+      <a class="linktoold" target="_blank" href="http://apfco.com.vn/?v=o"> Website cũ</a>
     </div>
   </div>
 </template>
@@ -76,5 +78,24 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-right: 1rem;
+}
+
+.linktoold {
+  font-weight: 500;
+  padding: 0 1rem;
+  height: 1.875rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $apfco-green;
+  transition: all 0.3s ease-in;
+
+  &:hover {
+
+    background-color: #fff;
+    color: $apfco-green;
+  }
 }
 </style>
