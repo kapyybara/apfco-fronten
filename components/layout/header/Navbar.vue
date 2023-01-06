@@ -12,6 +12,11 @@
       >{{ $t(nav.value) }}
     </nuxt-link>
     <a
+      href="http://apfco.com.vn/?v=o&sj=05"
+      class="nav__item sm-medium"
+      >{{ $t('nav_relations') }}</a
+    >
+    <a
       href="http://apfco.com.vn/htmx/basic/login/login.aspx"
       class="nav__item sm-medium"
       >{{ $t('work') }}</a
@@ -56,7 +61,7 @@ export default {
         { name: 'index', value: 'nav_home', path: '' },
         { name: 'about-us', value: 'nav_aboutus', path: '/about-us' },
         { name: 'product', value: 'nav_product', path: '/product' },
-        { name: 'relations', value: 'nav_relations', path: '/relations' },
+        // { name: 'relations', value: 'nav_relations', path: 'http://apfco.com.vn/?sj=05' },
         // {
         //   name: 'work',
         //   value: 'Làm việc',
@@ -127,7 +132,7 @@ export default {
     padding-top: 80px;
     transition: all 0.3s ease-out;
 
-    & > a {
+    &>a {
       width: fill;
       text-align: right;
     }
@@ -135,7 +140,7 @@ export default {
     transition: all 0.3s ease-in;
     transform: translateY(-100%);
 
-    & > * {
+    &>* {
       height: 48px;
     }
   }
