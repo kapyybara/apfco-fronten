@@ -1,17 +1,24 @@
 <template>
   <div class="aboutus container">
     <div class="aboutus__decor">
-      <img src="https://b-f11-zpc.zdn.vn/4079694386589023876/4decdad14ce494bacdf5.jpg" alt="" />
+      <img
+        src="https://b-f11-zpc.zdn.vn/4079694386589023876/4decdad14ce494bacdf5.jpg"
+        alt=""
+      />
     </div>
     <div class="aboutus__content">
-      <h2 class="xxl-semibold">{{ $t("home__aboutus-title") }}</h2>
+      <h2 class="xxl-semibold">{{ $t('home__aboutus-title') }}</h2>
       <span></span>
       <p class="xl-normal">
-        <img src="https://b-f11-zpc.zdn.vn/4079694386589023876/4decdad14ce494bacdf5.jpg" alt="" class="image-mobile" />
-        {{ $t("home__aboutus-content") }}
+        <img
+          src="https://b-f11-zpc.zdn.vn/4079694386589023876/4decdad14ce494bacdf5.jpg"
+          alt=""
+          class="image-mobile"
+        />
+        {{ $t('home__aboutus-content') }}
       </p>
       <nuxt-link to="about-us">
-       <common-button :value="$t('see_more')" />
+        <common-button :value="$t('see_more')" />
       </nuxt-link>
     </div>
   </div>
@@ -52,9 +59,11 @@ export default {}
     height: 80%;
     z-index: -9;
 
-    background: linear-gradient(180deg,
+    background: linear-gradient(
+        180deg,
         #ffffff 11.46%,
-        rgba(255, 255, 255, 0) 100%),
+        rgba(255, 255, 255, 0) 100%
+      ),
       url('/images/aboutus-bg.png');
     background-repeat: no-repeat;
     background-position: top right;
@@ -65,7 +74,7 @@ export default {}
     width: 50%;
     height: fill;
 
-    &>img {
+    & > img {
       height: 100%;
       width: 100%;
       object-fit: contain;
@@ -86,15 +95,15 @@ export default {}
       padding: 3rem 1rem;
     }
 
-    &>* {
+    & > * {
       margin-bottom: 2rem;
     }
 
-    &>h2 {
+    & > h2 {
       color: $apfco-green;
     }
 
-    &>span {
+    & > span {
       width: 2rem;
       height: 0.25rem;
       display: block;
@@ -103,7 +112,7 @@ export default {}
       border-radius: 2px;
     }
 
-    &>p {
+    & > p {
       color: #667085;
     }
   }

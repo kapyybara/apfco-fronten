@@ -58,7 +58,7 @@
         <p>“Sản xuất và kinh doanh tinh bột sắn và các sản phẩm sau tinh bột” không chỉ là hoạt động nổi bật và chính của doanh nghiệp, mà còn là nền tảng chủ chốt trong việc đưa APFCO trở thành một trong các doanh nghiệp dẫn đầu trong ngành Sắn Việt Nam. Và, tự hào hơn khi APFCO hiện nay là một trong các doanh nghiệp hàng đầu của ngành sản xuất - xuất khẩu tinh bột sắn trong khu vực Đông Nam Á.</p>
      </div>
      <div class="aboutus-2 xl-normal">
-        <p>Thương hiệu APFCO đã và đang được nhiều đơn vị khách hàng trên thị trường trong và ngoài nước đón nhận bởi chất lượng sản phẩm (nguồn nguyên liệu tươi, sản phẩm bột đạt tiêu chuẩn khắt khe, bảo quản trong môi trường chuyên nghiệp), áp dụng kĩ thuật - công nghệ tiên tiến (ISO 9001:2015), khẳng định uy tín lâu dài.</p>
+        <p>Thương hiệu APFCO đã và đang được nhiều đơn vị khách hàng trên thị trường trong và ngoài nước đón nhận bởi chất lượng sản phẩm (nguồn nguyên liệu tươi, sản phẩm bột đạt tiêu chuẩn khắt khe, bảo quản trong môi trường chuyên nghiệp), áp dụng kĩ thuật - công nghệ tiên tiến, khẳng định uy tín lâu dài.</p>
         <span></span>
         <div class="aboutus-2__images">
                 <img src="https://f8-zpcloud.zdn.vn/4178928017471538660/6730bf9d24a8fcf6a5b9.jpg" alt="">
