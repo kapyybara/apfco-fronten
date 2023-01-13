@@ -4,10 +4,7 @@
       <div class="banner-item">
         <div class="container">
           <div class="banner-item__img">
-            <img
-              src="https://b-f5-zpc.zdn.vn/6913059151309422733/7316fbdd53ff8ba1d2ee.jpg"
-              alt=""
-            />
+            <img src="images/banner-tet.jpg" alt="" />
           </div>
         </div>
       </div>

@@ -59,7 +59,7 @@ export default {
     return {
       position: 0,
       index: 0,
-      direct: true
+      direct: true,
     }
   },
   computed: {
@@ -84,22 +84,17 @@ export default {
     },
     autoTransition() {
       setInterval(() => {
-        if (this.direct)
-          this.triggerNext()
-        else
-          this.triggerPrev()
+        if (this.direct) this.triggerNext()
+        else this.triggerPrev()
 
-        if (this.index === this.length - 1)
-          this.direct = false
-        else if (this.index === 0)
-          this.direct = true
-      }, 5000);
-    }
+        if (this.index === this.length - 1) this.direct = false
+        else if (this.index === 0) this.direct = true
+      }, 5000)
+    },
   },
   created() {
-
     this.autoTransition()
-  }
+  },
 }
 </script>
 
@@ -113,6 +108,7 @@ export default {
   overflow: hidden;
   display: flex;
   flex-direction: row;
+  height: 600px;
 
   &-inner {
     position: absolute;
@@ -157,7 +153,7 @@ export default {
     border-radius: 5rem;
     cursor: pointer;
 
-    &>* {
+    & > * {
       transform: scale(0.8);
     }
   }
@@ -175,7 +171,7 @@ export default {
 
   cursor: pointer;
 
-  &>*+* {
+  & > * + * {
     margin-left: 0.5rem;
   }
 
