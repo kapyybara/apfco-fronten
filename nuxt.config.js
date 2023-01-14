@@ -36,13 +36,29 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/i18n',
+    '@nuxtjs/apollo',
   ],
 
   i18n: i18nConfig,
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: 'https://7wy8iw50.api.sanity.io/v2021-10-21/data/query/production?',
+    baseURL:
+      'https://7wy8iw50.api.sanity.io/v2021-10-21/data/query/production?',
+  },
+
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: 'https://stirred-shiner-19.hasura.app/v1/graphql', // Example url
+        httpLinkOptions: {
+          headers: {
+            'x-hasura-admin-secret': 'TKrjwyPC0UH3sfUFyNS64kCfLastnHcvTnA9NyF5TCjX27U5WNuzNxIeZopDrN0y',
+            'content-typex-auth-token': 'application/json'
+          }
+        }
+      },
+    },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

@@ -58,22 +58,42 @@
         </div>
       </div>
     </div>
-    <product-item
-      v-for="product in products"
-      :key="product.id"
-      :name="product.name"
-      :feature="product.feature"
-      :chara="product.chara"
-      :img="product.img"
-      :table="product.table"
-      :index="products.indexOf(product)"
-      class="product-wrap"
-    />
+    <template v-if="products">
+      <product-item
+        v-for="product in products"
+        :key="product.id"
+        :name="product.name"
+        :feature="product.feature"
+        :chara="product.chara"
+        :img="product.img"
+        :table="product.table"
+        :index="products.indexOf(product)"
+        class="product-wrap"
+      />
+    </template>
   </div>
 </template>
 
 <script>
+import gql from 'graphql-tag'
 export default {
+  apollo: {
+    products: {
+      query: gql`
+        query MyQuery {
+          products: product {
+            chara
+            feature
+            id
+            index
+            name
+            table
+            img
+          }
+        }
+      `,
+    },
+  },
   data() {
     return {
       products: [
@@ -345,7 +365,7 @@ export default {
         },
         {
           id: 'fed5e8f1-db32-4573-b4bf-c1ec9e418087',
-          name: 'OXIDIZED STARCH - E.1404',
+          name: 'PREGELATINIZED TAPIOCA STARCH (ALPHA STARCH)',
           img: '/images/IMG_2495.JPG',
           feature: [
             'Tinh bột alpha là sản phẩm hồ hóa trước theo phương pháp vật lý. Vì vậy tinh bột alpha có thể hồ hóa ở nhiệt độ thường.',
