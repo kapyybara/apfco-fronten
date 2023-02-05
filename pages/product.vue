@@ -71,29 +71,92 @@
         class="product-wrap"
       />
     </template>
+
+    <div class="container alcohol">
+      <p class="xxl-semibold content-1__title">{{ $t('product2__header') }}</p>
+      <div class="alcohol__inner sm-normal">
+        <p class="content-1__inner-1">
+          {{ $t('product2__content-1') }}
+        </p>
+        <table class="product__table">
+          <tr>
+            <th>{{ key }}Chỉ tiêu</th>
+            <th>Đơn vị tính</th>
+            <th>Mức công bố</th>
+          </tr>
+          <tr>
+            <td>{{ $t('row1-1') }}</td>
+            <td>{{ $t('row1-2') }}</td>
+            <td>{{ $t('row1-3') }}</td>
+          </tr>
+          <tr>
+            <td>{{ $t('row2-1') }}</td>
+            <td>{{ $t('row2-2') }}</td>
+            <td>{{ $t('row2-3') }}</td>
+          </tr>
+          <tr>
+            <td>{{ $t('row3-1') }}</td>
+            <td>{{ $t('row3-2') }}</td>
+            <td>{{ $t('row3-3') }}</td>
+          </tr>
+          <tr>
+            <td>{{ $t('row4-1') }}</td>
+            <td>{{ $t('row4-2') }}</td>
+            <td>{{ $t('row4-3') }}</td>
+          </tr>
+          <tr>
+            <td>{{ $t('row5-1') }}</td>
+            <td>{{ $t('row5-2') }}</td>
+            <td>{{ $t('row5-3') }}</td>
+          </tr>
+          <tr>
+            <td>{{ $t('row6-1') }}</td>
+            <td>{{ $t('row6-2') }}</td>
+            <td>{{ $t('row6-3') }}</td>
+          </tr>
+          <tr>
+            <td>{{ $t('row7-1') }}</td>
+            <td>{{ $t('row7-2') }}</td>
+            <td>{{ $t('row7-3') }}</td>
+          </tr>
+          <tr>
+            <td>{{ $t('row8-1') }}</td>
+            <td>{{ $t('row8-2') }}</td>
+            <td>{{ $t('row8-3') }}</td>
+          </tr>
+          <tr>
+            <td>{{ $t('row9-1') }}</td>
+            <td>{{ $t('row9-2') }}</td>
+            <td>{{ $t('row9-3') }}</td>
+          </tr>
+        </table>
+        <p class="content-1__inner-1">
+          {{ $t('product2__content-2') }}
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import gql from 'graphql-tag'
 export default {
-  apollo: {
-    products: {
-      query: gql`
-        query MyQuery {
-          products: product {
-            chara
-            feature
-            id
-            index
-            name
-            table
-            img
-          }
-        }
-      `,
-    },
-  },
+  // apollo: {
+  //   products: {
+  //     query: gql`
+  //       query MyQuery {
+  //         products: product {
+  //           chara
+  //           feature
+  //           id
+  //           index
+  //           name
+  //           table
+  //           img
+  //         }
+  //       }
+  //     `,
+  //   },
+  // },
   data() {
     return {
       products: [
@@ -418,6 +481,7 @@ export default {
     &-wrap {
       width: 50%;
       padding: 0 1rem;
+
       @include mobile {
         width: 100%;
       }
@@ -445,6 +509,36 @@ export default {
         color: $apfco-green;
       }
     }
+  }
+}
+
+table {
+  border: 1px solid;
+  width: fill;
+  margin: 1rem 1rem 1rem 0;
+
+  th {
+    background: #e8e8e8;
+  }
+
+  td,
+  th {
+    border: 1px solid;
+    padding: 0.3rem 0.5rem;
+  }
+}
+
+.alcohol {
+  width: fill;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &__inner {
+    width: fill;
+  }
+  & > * {
+    margin-bottom: 1.5rem;
   }
 }
 </style>

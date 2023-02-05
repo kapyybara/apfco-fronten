@@ -1,20 +1,13 @@
 <template>
   <div class="aboutus container">
     <div class="aboutus__decor">
-      <img
-        src="https://b-f11-zpc.zdn.vn/4079694386589023876/4decdad14ce494bacdf5.jpg"
-        alt=""
-      />
+      <img src="images/about-us.png" alt="" />
     </div>
     <div class="aboutus__content">
       <h2 class="xxl-semibold">{{ $t('home__aboutus-title') }}</h2>
       <span></span>
       <p class="xl-normal">
-        <img
-          src="https://b-f11-zpc.zdn.vn/4079694386589023876/4decdad14ce494bacdf5.jpg"
-          alt=""
-          class="image-mobile"
-        />
+        <img src="images/about-us.png" alt="" class="image-mobile" />
         {{ $t('home__aboutus-content') }}
       </p>
       <nuxt-link to="about-us">
