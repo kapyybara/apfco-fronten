@@ -3,12 +3,21 @@
     <span class="product__title xxl-semibold">{{ name }}</span>
     <div class="product" :class="{ reverse: index % 2 === 1 }">
       <div v-if="table && table.length > 0" class="product__detail">
-        <p class="product__group1-title md-semibold">Tiêu chuẩn kỹ thuật</p>
+        <p class="product__group1-title md-semibold">
+          {{ $t('product__tech') }}
+        </p>
         <table class="product__table">
           <tr>
-            <th>{{ key }}Chỉ tiêu</th>
-            <th>ĐVT</th>
-            <th>Quy cách</th>
+            <th>
+              {{ key }}
+              {{ $t('product__tech1') }}
+            </th>
+            <th>
+              {{ $t('product__tech2') }}
+            </th>
+            <th>
+              {{ $t('product__tech3') }}
+            </th>
           </tr>
           <tr v-for="row in table" :key="table.indexOf(row)">
             <td>{{ row.name }}</td>
@@ -18,13 +27,17 @@
         </table>
       </div>
       <div class="product__group1">
-        <p class="product__group1-title md-semibold">Đặc tính</p>
+        <p class="product__group1-title md-semibold">
+          {{ $t('product__attr') }}
+        </p>
         <ul class="product__group1-list">
           <li v-for="item in feature" :key="feature.indexOf(item)">
             - {{ item }}
           </li>
         </ul>
-        <p class="product__group1-title md-semibold">Ứng dụng</p>
+        <p class="product__group1-title md-semibold">
+          {{ $t('product__feature') }}
+        </p>
         <ul class="product__group1-list">
           <img :src="img" alt="" class="product__img-mobile" />
           <li v-for="item in chara" :key="chara.indexOf(item)">- {{ item }}</li>
@@ -77,7 +90,6 @@ export default {
     padding: 1rem 3rem;
     background: $apfco-green;
     color: #fff;
-    border-radius: 1rem;
     margin-bottom: 2rem;
   }
 

@@ -2,21 +2,57 @@
   <div class="relations">
     <img src="/images/realtions_banner.jpg" alt="" />
     <div class="relations__menu md-semibold">
-      <nuxt-link to="relations" @click="setCurr({ value: 'relations__menu-1', index: 0 })">{{
-        $t('relations__menu-1')
-      }}</nuxt-link>
-      <nuxt-link to="relations/2" @click="setCurr({ value: 'relations__menu-2', index: 1 })">{{
-        $t('relations__menu-2')
-      }}</nuxt-link>
-      <nuxt-link to="relations/3" @click="setCurr({ value: 'relations__menu-3', index: 2 })">{{
-        $t('relations__menu-3')
-      }}</nuxt-link>
-      <nuxt-link to="relations/4" @click="setCurr({ value: 'relations__menu-4', index: 3 })">{{
-        $t('relations__menu-4')
-      }}</nuxt-link>
-      <nuxt-link to="relations/5" @click="setCurr({ value: 'relations__menu-5', index: 4 })">{{
-        $t('relations__menu-5')
-      }}</nuxt-link>
+      <nuxt-link
+        to="relations"
+        @click="setCurr({ value: 'relations__menu-1', index: 0 })"
+        >{{ $t('relations__menu-1') }}</nuxt-link
+      >
+      <nuxt-link
+        to="relations"
+        @click="setCurr({ value: 'relations__menu-2', index: 1 })"
+        >{{ $t('relations__menu-2') }}</nuxt-link
+      >
+      <nuxt-link
+        to="relations"
+        @click="setCurr({ value: 'relations__menu-3', index: 2 })"
+        >{{ $t('relations__menu-3') }}</nuxt-link
+      >
+      <nuxt-link
+        to="relations"
+        @click="setCurr({ value: 'relations__menu-4', index: 3 })"
+        >{{ $t('relations__menu-4') }}</nuxt-link
+      >
+      <nuxt-link
+        to="relations"
+        @click="setCurr({ value: 'relations__menu-5', index: 4 })"
+        >{{ $t('relations__menu-5') }}</nuxt-link
+      >
+    </div>
+    <div class="listyear">
+      <a class="listyear__item" href="http://apfco.com.vn/?v=o&sj=05"
+        ><span>2016</span></a
+      >
+      <a class="listyear__item" href="http://apfco.com.vn/?v=o&sj=05"
+        ><span>2017</span></a
+      >
+      <a class="listyear__item" href="http://apfco.com.vn/?v=o&sj=05"
+        ><span>2018</span></a
+      >
+      <a class="listyear__item" href="http://apfco.com.vn/?v=o&sj=05"
+        ><span>2019</span></a
+      >
+      <a class="listyear__item" href="http://apfco.com.vn/?v=o&sj=05"
+        ><span>2020</span></a
+      >
+      <a class="listyear__item" href="http://apfco.com.vn/?v=o&sj=05"
+        ><span>2021</span></a
+      >
+      <a class="listyear__item" href="http://apfco.com.vn/?v=o&sj=05"
+        ><span>2022</span></a
+      >
+      <a class="listyear__item" href="http://apfco.com.vn/?v=o&sj=05"
+        ><span>2023</span></a
+      >
     </div>
     <div class="relations-main container">
       <h2 class="xxl-bold">{{ $t(curr) }}</h2>
@@ -24,7 +60,17 @@
         <a
           :href="document.link"
           class="item"
-          v-for="document in documents"
+          v-for="document in [
+            { link: 'http://apfco.com.vn/?v=o&sj=05', name: 'Tài liệu apfco' },
+            { link: 'http://apfco.com.vn/?v=o&sj=05', name: 'Tài liệu apfco' },
+            { link: 'http://apfco.com.vn/?v=o&sj=05', name: 'Tài liệu apfco' },
+            { link: 'http://apfco.com.vn/?v=o&sj=05', name: 'Tài liệu apfco' },
+            { link: 'http://apfco.com.vn/?v=o&sj=05', name: 'Tài liệu apfco' },
+            { link: 'http://apfco.com.vn/?v=o&sj=05', name: 'Tài liệu apfco' },
+            { link: 'http://apfco.com.vn/?v=o&sj=05', name: 'Tài liệu apfco' },
+            { link: 'http://apfco.com.vn/?v=o&sj=05', name: 'Tài liệu apfco' },
+            { link: 'http://apfco.com.vn/?v=o&sj=05', name: 'Tài liệu apfco' },
+          ]"
           :key="document._id"
         >
           <img src="/icons/pdf.png" alt="" />
@@ -44,11 +90,6 @@ export default {
       this.currIndex = index
     },
   },
-  async asyncData({ $axios }) {
-    const res = await $axios.$get('https://7wy8iw50.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type%20%3D%3D%20%22doc_1%22%5D')
-    console.log(res.result)
-    return { documents: res.result }
-  },
   data() {
     return {
       curr: 'relations__menu-1',
@@ -67,7 +108,7 @@ export default {
   position: relative;
   padding-top: 350px;
 
-  &>img {
+  & > img {
     width: 100vw;
     height: 450px;
     object-fit: cover;
@@ -86,7 +127,7 @@ export default {
     flex-direction: row;
     z-index: 99;
 
-    &>* {
+    & > * {
       padding: 1rem 2rem;
       background: $apfco-green;
       color: #fff;
@@ -99,7 +140,6 @@ export default {
 
       &:hover {
         filter: brightness(1.2);
-        box-shadow: -0px 0px;
       }
     }
 
@@ -107,7 +147,7 @@ export default {
       flex-direction: column;
       top: 20px;
 
-      &>* {
+      & > * {
         width: fill;
         text-align: center;
       }
@@ -126,7 +166,7 @@ export default {
       padding: 2rem 1rem;
     }
 
-    &>h2 {
+    & > h2 {
       color: $apfco-green;
     }
 
@@ -145,9 +185,13 @@ export default {
 
   &__content {
     display: flex;
-    flex-direction: column;
-    width: inherit;
-    align-items: start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: fill;
+    margin-top: 2rem;
+    & > a {
+      width: 50%;
+    }
   }
 }
 
@@ -174,9 +218,54 @@ export default {
     background: #dedede;
   }
 
-  &>img {
+  & > img {
     width: 2rem;
     margin-right: 1rem;
+  }
+}
+
+.listyear {
+  width: fill;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+
+  &__item {
+    padding: 0.5rem 2rem;
+    margin: 1rem 1rem;
+    border-bottom: 2px solid rgb(1, 145, 71);
+    color: rgb(1, 145, 71);
+    background-color: rgba(237, 255, 246);
+    transition: all 0.2s ease-in;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s ease-in;
+    & > span {
+      transition: all 0.2s ease-in;
+      position: relative;
+      z-index: 2;
+    }
+    &:before {
+      z-index: 1;
+      position: absolute;
+      content: '';
+      bottom: -100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgb(1, 145, 71);
+      width: 100%;
+      height: 100%;
+      transition: all 0.2s ease-in;
+    }
+    &:hover {
+      color: white;
+      &::before {
+        bottom: 0;
+      }
+    }
   }
 }
 </style>

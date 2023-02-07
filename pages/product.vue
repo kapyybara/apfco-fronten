@@ -19,7 +19,7 @@
             <li>- {{ $t('product1__content-19') }}</li>
           </ul>
           <div class="content-1__inner-3">
-            <p class="md-semibold">{{ $t('product1__content-15') }}</p>
+            <p class="md-semibold">{{ $t('product__content-15') }}</p>
             <ul class="">
               <li>- {{ $t('product1__content-16') }}</li>
               <li>- {{ $t('product1__content-17') }}</li>
@@ -80,9 +80,9 @@
         </p>
         <table class="product__table">
           <tr>
-            <th>{{ key }}Chỉ tiêu</th>
-            <th>Đơn vị tính</th>
-            <th>Mức công bố</th>
+            <th>{{ key }}{{ $t('product__tech1') }}</th>
+            <th>{{ $t('product__tech2') }}</th>
+            <th>{{ $t('product__tech3') }}</th>
           </tr>
           <tr>
             <td>{{ $t('row1-1') }}</td>
@@ -137,6 +137,7 @@
     </div>
   </div>
 </template>
+qu
 
 <script>
 export default {
