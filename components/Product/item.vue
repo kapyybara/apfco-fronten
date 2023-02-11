@@ -20,7 +20,7 @@
             </th>
           </tr>
           <tr v-for="row in table" :key="table.indexOf(row)">
-            <td>{{ row.name }}</td>
+            <td>{{ $t(row.name)  }}</td>
             <td>{{ row.unit }}</td>
             <td>{{ row.spec }}</td>
           </tr>
@@ -32,7 +32,7 @@
         </p>
         <ul class="product__group1-list">
           <li v-for="item in feature" :key="feature.indexOf(item)">
-            - {{ item }}
+            - {{ $t(item) }}
           </li>
         </ul>
         <p class="product__group1-title md-semibold">
@@ -40,7 +40,9 @@
         </p>
         <ul class="product__group1-list">
           <img :src="img" alt="" class="product__img-mobile" />
-          <li v-for="item in chara" :key="chara.indexOf(item)">- {{ item }}</li>
+          <li v-for="item in chara" :key="chara.indexOf(item)">
+            - {{ $t(item) }}
+          </li>
         </ul>
       </div>
       <img :src="img" alt="" class="product__img" />
